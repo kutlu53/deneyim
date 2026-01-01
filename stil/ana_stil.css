@@ -1,0 +1,449 @@
+/* Genel stiller */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Ust baslik */
+.ust_baslik {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ust_baslik h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.gecmis_butonu {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.gecmis_butonu:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Filtre bolumu */
+.filtre_bolumu {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.kategori_secimi, .arama_bolumu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.kategori_secimi label, .arama_bolumu label {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+#kategori_filtresi {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    flex: 1;
+}
+
+#arama_kutusu {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    flex: 1;
+}
+
+/* Hata mesaji */
+.hata_mesaji {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    border-left: 4px solid #c62828;
+}
+
+/* Deney listesi */
+.deney_listesi {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Deney karti */
+.deney_karti {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.deney_karti:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.deney_karti_baslik {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.deney_karti_bilgi {
+    color: #666;
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.deney_karti_sinif {
+    display: inline-block;
+    background-color: #e3f2fd;
+    color: #1976d2;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 0.85em;
+    margin-right: 5px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal_icerik {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal_kapat {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+.modal_kapat:hover,
+.modal_kapat:focus {
+    color: #000;
+}
+
+/* Modal icerik stilleri */
+.deney_detay_baslik {
+    font-size: 2em;
+    color: #667eea;
+    margin-bottom: 20px;
+    padding-right: 30px;
+}
+
+.deney_detay_bolum {
+    margin: 20px 0;
+}
+
+.deney_detay_bolum_baslik {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 5px;
+}
+
+.deney_detay_liste {
+    list-style-position: inside;
+    padding-left: 10px;
+}
+
+.deney_detay_liste li {
+    margin: 8px 0;
+}
+
+.guvenlik_uyari {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+/* Animasyon alani */
+.animasyon_alani {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+#deney_animasyon_tuvali {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+}
+
+.animasyon_kontrol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.animasyon_butonu {
+    background-color: #667eea;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    min-width: 160px;
+}
+
+.animasyon_butonu:hover:not(:disabled) {
+    background-color: #5568d3;
+}
+
+.animasyon_butonu:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+#animasyon_notu {
+    color: #666;
+    font-size: 0.9em;
+    font-style: italic;
+    min-height: 20px;
+}
+
+/* Form stilleri */
+.form_grup {
+    margin: 15px 0;
+}
+
+.form_grup label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form_grup input[type="text"],
+.form_grup input[type="number"],
+.form_grup textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+}
+
+.form_grup textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.form_grup .birim_etiketi {
+    color: #666;
+    font-size: 0.9em;
+    margin-left: 5px;
+}
+
+.buton_grup {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.ana_buton {
+    background-color: #667eea;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ana_buton:hover {
+    background-color: #5568d3;
+}
+
+/* Analiz sonucu */
+.analiz_sonuc {
+    background-color: #e8f5e9;
+    border-left: 4px solid #4caf50;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.analiz_sonuc_baslik {
+    font-weight: bold;
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.analiz_sonuc_metin {
+    color: #333;
+    line-height: 1.8;
+}
+
+/* Gecmis liste */
+.gecmis_kayit {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.gecmis_kayit_baslik {
+    font-weight: bold;
+    color: #667eea;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.gecmis_kayit_tarih {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.gecmis_kayit_ozet {
+    color: #333;
+    font-size: 0.95em;
+    margin: 5px 0;
+}
+
+.gecmis_kayit_ozet_baslik {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Responsive tasarim */
+@media (max-width: 768px) {
+    .ust_baslik {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .ust_baslik h1 {
+        font-size: 1.5em;
+    }
+
+    .filtre_bolumu {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .kategori_secimi, .arama_bolumu {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .deney_listesi {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    .modal_icerik {
+        width: 95%;
+        margin: 10% auto;
+        padding: 20px;
+    }
+
+    .deney_detay_baslik {
+        font-size: 1.5em;
+    }
+
+    #deney_animasyon_tuvali {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .ust_baslik h1 {
+        font-size: 1.2em;
+    }
+
+    .gecmis_butonu {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .modal_icerik {
+        padding: 15px;
+    }
+}
+
