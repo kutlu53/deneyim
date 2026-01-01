@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evde Fizik Laboratuvari</title>
+    <link rel="stylesheet" href="stil/ana_stil.css">
+</head>
+<body>
+    <!-- Ust baslik -->
+    <header class="ust_baslik">
+        <h1>Evde Fizik Laboratuvari</h1>
+        <button id="gecmis_butonu" class="gecmis_butonu">Gecmisim</button>
+    </header>
+
+    <!-- Filtre ve arama bolumu -->
+    <section class="filtre_bolumu">
+        <div class="kategori_secimi">
+            <label for="kategori_filtresi">Kategori:</label>
+            <select id="kategori_filtresi">
+                <option value="tumu">Tumu</option>
+            </select>
+        </div>
+        <div class="arama_bolumu">
+            <label for="arama_kutusu">Arama:</label>
+            <input type="text" id="arama_kutusu" placeholder="Deney basliginda ara...">
+        </div>
+    </section>
+
+    <!-- Hata mesaji alani -->
+    <div id="hata_mesaji" class="hata_mesaji" style="display: none;"></div>
+
+    <!-- Deney kartlari alani -->
+    <main class="deney_listesi" id="deney_listesi">
+        <!-- Deney kartlari buraya dinamik olarak eklenecek -->
+    </main>
+
+    <!-- Deney detay modal -->
+    <div id="deney_modal" class="modal" style="display: none;">
+        <div class="modal_icerik">
+            <span class="modal_kapat">&times;</span>
+            <div id="modal_icerik_alani">
+                <!-- Deney detaylari buraya eklenecek -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Gecmis modal -->
+    <div id="gecmis_modal" class="modal" style="display: none;">
+        <div class="modal_icerik">
+            <span class="modal_kapat">&times;</span>
+            <h2>Deney Gecmisi</h2>
+            <div id="gecmis_liste_alani">
+                <!-- Gecmis kayitlar buraya eklenecek -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript dosyalari -->
+    <script src="js/veri_servisi.js"></script>
+    <script src="js/depolama_servisi.js"></script>
+    <script src="js/animasyon_motoru.js"></script>
+    <script src="js/arayuz.js"></script>
+    <script src="js/uygulama.js"></script>
+</body>
+</html>
+
