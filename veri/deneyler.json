@@ -1,0 +1,5247 @@
+{
+    "surum": "1.0",
+    "kategoriler": [
+        {
+            "kimlik": "madde_ozellikleri",
+            "ad": "Madde ve Ozellikleri",
+            "siniflar": [
+                5,
+                6
+            ]
+        },
+        {
+            "kimlik": "kuvvet_hareket",
+            "ad": "Kuvvet ve Hareket",
+            "siniflar": [
+                5,
+                6,
+                7
+            ]
+        },
+        {
+            "kimlik": "surtunme",
+            "ad": "Surtunme",
+            "siniflar": [
+                5,
+                6
+            ]
+        },
+        {
+            "kimlik": "enerji",
+            "ad": "Enerji Turleri ve Donusumleri",
+            "siniflar": [
+                6,
+                7
+            ]
+        },
+        {
+            "kimlik": "isi_sicaklik",
+            "ad": "Isi ve Sicaklik",
+            "siniflar": [
+                6,
+                7
+            ]
+        },
+        {
+            "kimlik": "ses_dalgalar",
+            "ad": "Ses ve Dalgalar",
+            "siniflar": [
+                6,
+                7
+            ]
+        },
+        {
+            "kimlik": "isik_gorme",
+            "ad": "Isik ve Gorme",
+            "siniflar": [
+                7
+            ]
+        },
+        {
+            "kimlik": "basinc",
+            "ad": "Basinc",
+            "siniflar": [
+                6,
+                7
+            ]
+        },
+        {
+            "kimlik": "basit_makineler",
+            "ad": "Basit Makineler",
+            "siniflar": [
+                7
+            ]
+        },
+        {
+            "kimlik": "bilimsel_surec",
+            "ad": "Bilimsel Surec Becerileri",
+            "siniflar": [
+                5,
+                6,
+                7
+            ]
+        }
+    ],
+    "deneyler": [
+        {
+            "kimlik": "MO01",
+            "baslik": "Yuzen mi Batan mi (Basit Yogunluk)",
+            "kategori": "madde_ozellikleri",
+            "sinif_araligi": {
+                "en_az": 5,
+                "en_cok": 6
+            },
+            "tahmini_sure_dk": 15,
+            "malzemeler": [
+                "Seffaf kap",
+                "Su",
+                "Tahta parcasi",
+                "Metal kasik",
+                "Plastik kapak",
+                "Tas"
+            ],
+            "guvenlik": [
+                "Cam kap kullaniyorsan dikkatli ol."
+            ],
+            "adimlar": [
+                "Kabi suyla doldur.",
+                "Cisimleri sirayla suya birak.",
+                "Her birinin batti mi yuzen mi oldugunu not et."
+            ],
+            "tahmin_sorusu": "Hangi cisimler yuzer, hangileri batar? Neden?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "yuzen_sayisi",
+                    "etiket": "Yuzen cisim sayisi",
+                    "tip": "sayi",
+                    "birim": "adet"
+                },
+                {
+                    "anahtar": "batan_sayisi",
+                    "etiket": "Batan cisim sayisi",
+                    "tip": "sayi",
+                    "birim": "adet"
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Yogunlugu sudan kucuk olanlar genelde yuzer, buyuk olanlar batar.",
+                "cikti_sablonu": "Yuzen: {{yuzen_sayisi}} | Batan: {{batan_sayisi}}. Yogunluk farki davranisi etkiler."
+            },
+            "yaygin_hatalar": [
+                "Cismi suya cok sert birakmak (hava kabarcigi etkisi)"
+            ],
+            "gunluk_yasam_baglantisi": "Gemilerin yuzmesi, can yelekleri, buzun suda yuzmesi",
+            "animasyon": {
+                "tur": "canvas",
+                "ozel_mi": true,
+                "sahneler": [
+                    {
+                        "sure_ms": 1500,
+                        "metin": "Kabi suyla dolduruyoruz...",
+                        "ogeler": [
+                            {
+                                "tur": "kap",
+                                "x": 260,
+                                "y": 120,
+                                "w": 80,
+                                "h": 100,
+                                "renk": "#ffffff",
+                                "anim": ""
+                            },
+                            {
+                                "tur": "dikdortgen",
+                                "x": 260,
+                                "y": 180,
+                                "w": 76,
+                                "h": 40,
+                                "renk": "#4a90e2",
+                                "anim": "dalgalan"
+                            }
+                        ]
+                    },
+                    {
+                        "sure_ms": 2000,
+                        "metin": "Cisim suya birakiliyor...",
+                        "ogeler": [
+                            {
+                                "tur": "kap",
+                                "x": 260,
+                                "y": 120,
+                                "w": 80,
+                                "h": 100,
+                                "renk": "#ffffff",
+                                "anim": ""
+                            },
+                            {
+                                "tur": "dikdortgen",
+                                "x": 260,
+                                "y": 180,
+                                "w": 76,
+                                "h": 40,
+                                "renk": "#4a90e2",
+                                "anim": "dalgalan"
+                            },
+                            {
+                                "tur": "daire",
+                                "x": 260,
+                                "y": 50,
+                                "r": 15,
+                                "renk": "#8b4513",
+                                "anim": "dus",
+                                "hiz": 1.5
+                            }
+                        ]
+                    },
+                    {
+                        "sure_ms": 1800,
+                        "metin": "Yogunluk farki: Yuzen mi batan mi?",
+                        "ogeler": [
+                            {
+                                "tur": "kap",
+                                "x": 200,
+                                "y": 120,
+                                "w": 70,
+                                "h": 100,
+                                "renk": "#ffffff",
+                                "anim": ""
+                            },
+                            {
+                                "tur": "kap",
+                                "x": 320,
+                                "y": 120,
+                                "w": 70,
+                                "h": 100,
+                                "renk": "#ffffff",
+                                "anim": ""
+                            },
+                            {
+                                "tur": "dikdortgen",
+                                "x": 200,
+                                "y": 180,
+                                "w": 66,
+                                "h": 40,
+                                "renk": "#4a90e2",
+                                "anim": "dalgalan"
+                            },
+                            {
+                                "tur": "dikdortgen",
+                                "x": 320,
+                                "y": 180,
+                                "w": 66,
+                                "h": 40,
+                                "renk": "#4a90e2",
+                                "anim": "dalgalan"
+                            },
+                            {
+                                "tur": "daire",
+                                "x": 200,
+                                "y": 170,
+                                "r": 12,
+                                "renk": "#ff6b6b",
+                                "anim": "ziplat",
+                                "hiz": 0.8
+                            },
+                            {
+                                "tur": "daire",
+                                "x": 320,
+                                "y": 210,
+                                "r": 14,
+                                "renk": "#8b4513",
+                                "anim": "titre",
+                                "hiz": 1.2
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "kimlik": "MO02",
+            "baslik": "Su Yag Katmani (Yogunluk Siralamasi)",
+            "kategori": "madde_ozellikleri",
+            "sinif_araligi": {
+                "en_az": 5,
+                "en_cok": 6
+            },
+            "tahmini_sure_dk": 10,
+            "malzemeler": [
+                "Seffaf bardak",
+                "Su",
+                "Sivi yag"
+            ],
+            "guvenlik": [
+                "Dokulmeye karsi masa ortusu kullan."
+            ],
+            "adimlar": [
+                "Bardaga su koy.",
+                "Uzerine yavasca yagi ekle.",
+                "Katmanlari gozlemle ve not al."
+            ],
+            "tahmin_sorusu": "Yag suyun ustunde mi kalir, altinda mi? Neden?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "katman_sayisi",
+                    "etiket": "Gozlenen katman sayisi",
+                    "tip": "sayi",
+                    "birim": "katman"
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Daha kucuk yogunluklu sivi ustte kalir.",
+                "cikti_sablonu": "Katman sayisi: {{katman_sayisi}}. Yag suya gore daha dusuk yogunluklu oldugu icin ustte kalir."
+            },
+            "yaygin_hatalar": [
+                "Hizli dokme (karisma)"
+            ],
+            "gunluk_yasam_baglantisi": "Yagli corbada yagin ustte toplanmasi",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "yogunluk",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "MO03",
+            "baslik": "Tasirma Yontemiyle Hacim Olcme",
+            "kategori": "madde_ozellikleri",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 20,
+            "malzemeler": [
+                "Dereceli kap (yoksa seffaf sise + isaretleme)",
+                "Su",
+                "Tas veya kucuk cisim"
+            ],
+            "guvenlik": [
+                "Suyu dokmemeye dikkat et."
+            ],
+            "adimlar": [
+                "Kaptaki su seviyesini isaretle veya oku.",
+                "Cismi suya batir (tam batsin).",
+                "Yeni seviyeyi oku, farki hesapla."
+            ],
+            "tahmin_sorusu": "Tas batinca su seviyesi ne kadar artar?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "once_ml",
+                    "etiket": "Once su seviyesi",
+                    "tip": "sayi",
+                    "birim": "mL"
+                },
+                {
+                    "anahtar": "sonra_ml",
+                    "etiket": "Sonra su seviyesi",
+                    "tip": "sayi",
+                    "birim": "mL"
+                }
+            ],
+            "analiz": {
+                "tur": "formul",
+                "formul": "hacim_ml = sonra_ml - once_ml",
+                "cikti_sablonu": "Cismin hacmi yaklasik {{hacim_ml}} mL (yaklasik {{hacim_ml}} cm3)."
+            },
+            "yaygin_hatalar": [
+                "Cismi tam batirmamak",
+                "Seviyeyi goz hizasinda okumamak"
+            ],
+            "gunluk_yasam_baglantisi": "Duzensiz cisimlerin hacmini olcme",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "yogunluk",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "KH01",
+            "baslik": "Itme Cekme (Ayni Cisim Farkli Etki)",
+            "kategori": "kuvvet_hareket",
+            "sinif_araligi": {
+                "en_az": 5,
+                "en_cok": 5
+            },
+            "tahmini_sure_dk": 10,
+            "malzemeler": [
+                "Silgi veya oyuncak araba",
+                "Masa"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Cismi masada it.",
+                "Ayni cismi bu kez kendine dogru cek.",
+                "Hareket farkini gozlemle."
+            ],
+            "tahmin_sorusu": "Itince ve cekince hareket nasil degisir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem_notu",
+                    "etiket": "Gozlem notu",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Kuvvet hareketi baslatir, hizlandirir, yavaslatir veya yonunu degistirir.",
+                "cikti_sablonu": "Gozlem: {{gozlem_notu}}"
+            },
+            "yaygin_hatalar": [
+                "Zeminin egimli olmasi"
+            ],
+            "gunluk_yasam_baglantisi": "Kapiyi itmek cekmek",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "hareket",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "KH02",
+            "baslik": "Yer Cekimi ve Dusme Hizi",
+            "kategori": "kuvvet_hareket",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 15,
+            "malzemeler": [
+                "Kagit parcalari (farkli boy)",
+                "Kalem"
+            ],
+            "guvenlik": [
+                "Yuksekten dusurme."
+            ],
+            "adimlar": [
+                "Kucuk ve buyuk kagit parcasi al.",
+                "Ikisini ayni anda ayni yukseklikten birak.",
+                "Hangi biri once yere duser gozlemle."
+            ],
+            "tahmin_sorusu": "Agir olan daha hizli mi duser?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Gozlem notu",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Havada surtunme yoksa tum cisimler ayni hizda duser (agirlik fark etmez).",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Hava direncinin etkisini goz ardı etmek"
+            ],
+            "gunluk_yasam_baglantisi": "Paraşut, para atma",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "hareket",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "KH03",
+            "baslik": "Momentum ve Durma",
+            "kategori": "kuvvet_hareket",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 20,
+            "malzemeler": [
+                "Oyuncak top",
+                "Duz zemin"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Topu yavas yuvarla.",
+                "Sonra hizli yuvarla.",
+                "Hangi durumda daha uzun mesafe gider gozlemle."
+            ],
+            "tahmin_sorusu": "Hiz farki mesafeyi nasil etkiler?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "yavas_mesafe_cm",
+                    "etiket": "Yavas yuvarlama mesafesi",
+                    "tip": "sayi",
+                    "birim": "cm"
+                },
+                {
+                    "anahtar": "hizli_mesafe_cm",
+                    "etiket": "Hizli yuvarlama mesafesi",
+                    "tip": "sayi",
+                    "birim": "cm"
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Daha hizli hareket eden cisimler daha fazla momentum tasir ve daha uzun mesafe gider.",
+                "cikti_sablonu": "Yavas: {{yavas_mesafe_cm}} cm, Hizli: {{hizli_mesafe_cm}} cm. Hiz artisi mesafeyi artirir."
+            },
+            "yaygin_hatalar": [
+                "Zeminin esit olmamasi"
+            ],
+            "gunluk_yasam_baglantisi": "Araba fren mesafesi",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "hareket",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "SU01",
+            "baslik": "Hali mi Fayans mi (Surtunme Karsilastirmasi)",
+            "kategori": "surtunme",
+            "sinif_araligi": {
+                "en_az": 5,
+                "en_cok": 6
+            },
+            "tahmini_sure_dk": 15,
+            "malzemeler": [
+                "Oyuncak araba veya silgi",
+                "Hali",
+                "Fayans veya parke",
+                "Metre"
+            ],
+            "guvenlik": [
+                "Kaymamaya dikkat."
+            ],
+            "adimlar": [
+                "Cismi ayni itisle baslatmaya calis.",
+                "Hali ustunde gittigi mesafeyi olc.",
+                "Fayans veya parke ustunde tekrar et ve karsilastir."
+            ],
+            "tahmin_sorusu": "Hangi zeminde daha fazla gider?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "hali_mesafe_cm",
+                    "etiket": "Halida mesafe",
+                    "tip": "sayi",
+                    "birim": "cm"
+                },
+                {
+                    "anahtar": "fayans_mesafe_cm",
+                    "etiket": "Fayans parkede mesafe",
+                    "tip": "sayi",
+                    "birim": "cm"
+                }
+            ],
+            "analiz": {
+                "tur": "formul",
+                "formul": "fark_cm = fayans_mesafe_cm - hali_mesafe_cm",
+                "cikti_sablonu": "Fark yaklasik {{fark_cm}} cm. Daha az surtunmeli zeminde cisim daha cok ilerler."
+            },
+            "yaygin_hatalar": [
+                "Zemin egimi",
+                "Baslatma kuvvetini esit tutamamak"
+            ],
+            "gunluk_yasam_baglantisi": "Kaygan zeminde yurume, kis lastigi",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "surtunme",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "SU02",
+            "baslik": "Buzlu ve Normal Yuzey",
+            "kategori": "surtunme",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 6
+            },
+            "tahmini_sure_dk": 20,
+            "malzemeler": [
+                "Kucuk kap",
+                "Buz",
+                "Oyuncak araba"
+            ],
+            "guvenlik": [
+                "Buzu tutarken eldiven kullan."
+            ],
+            "adimlar": [
+                "Normal yuzeyde aracin mesafesini olc.",
+                "Buzlu yuzeyde (buzu yuzeye surt) tekrar olc.",
+                "Karsilastir."
+            ],
+            "tahmin_sorusu": "Buzlu yuzeyde daha mi az surtunme var?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "normal_cm",
+                    "etiket": "Normal yuzey mesafesi",
+                    "tip": "sayi",
+                    "birim": "cm"
+                },
+                {
+                    "anahtar": "buzlu_cm",
+                    "etiket": "Buzlu yuzey mesafesi",
+                    "tip": "sayi",
+                    "birim": "cm"
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Buzlu yuzeyler daha az surtunme saglar, bu yuzden cisimler daha uzun mesafe gider.",
+                "cikti_sablonu": "Normal: {{normal_cm}} cm, Buzlu: {{buzlu_cm}} cm. Buz surtunmeyi azaltir."
+            },
+            "yaygin_hatalar": [
+                "Buzun erimesi"
+            ],
+            "gunluk_yasam_baglantisi": "Kis yollari, buz pateni",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "surtunme",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "EN01",
+            "baslik": "El Isisi ve Isi Transferi",
+            "kategori": "enerji",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 15,
+            "malzemeler": [
+                "Metal kasik",
+                "Tas kasik",
+                "Pamuk"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Metal kasigi eline al, nasil hissettigini not et.",
+                "Tas kasigi al, karsilastir.",
+                "Pamuk parcasini al, karsilastir."
+            ],
+            "tahmin_sorusu": "Hangi madde daha hizli isinir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Hissettigin farklar",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Metal gibi iyi isi iletkenleri elinden isiyi hizli ceker, o yuzden soguk hissettirir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Cisimlerin baslangic sicakliginin farkli olmasi"
+            ],
+            "gunluk_yasam_baglantisi": "Tencere sapı, yalitim",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "top_sekme",
+                "ayarlar": {
+                    "baslangic_yukseklik": 150
+                }
+            }
+        },
+        {
+            "kimlik": "EN02",
+            "baslik": "Potansiyel ve Kinetik Enerji",
+            "kategori": "enerji",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 25,
+            "malzemeler": [
+                "Top",
+                "Yuksek bir yer (sandalye)"
+            ],
+            "guvenlik": [
+                "Yuksekten dusmemeye dikkat."
+            ],
+            "adimlar": [
+                "Topu yuksege koy (potansiyel enerji).",
+                "Birak ve dusur (kinetik enerjiye donusur).",
+                "Gozlemle."
+            ],
+            "tahmin_sorusu": "Yukseklik artinca enerji nasil degisir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "yukseklik_cm",
+                    "etiket": "Birakma yuksekligi",
+                    "tip": "sayi",
+                    "birim": "cm"
+                },
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Dusme gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Yukseklik arttikca potansiyel enerji artar, dusus sirasinda kinetik enerjiye donusur.",
+                "cikti_sablonu": "Yukseklik: {{yukseklik_cm}} cm. Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Hava direncinin goz ardı edilmesi"
+            ],
+            "gunluk_yasam_baglantisi": "Baraj, su carkları",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "top_sekme",
+                "ayarlar": {
+                    "baslangic_yukseklik": 150
+                }
+            }
+        },
+        {
+            "kimlik": "IS01",
+            "baslik": "Sicaklik ve Genlesme",
+            "kategori": "isi_sicaklik",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 20,
+            "malzemeler": [
+                "Plastik sise",
+                "Sicak su",
+                "Soğuk su"
+            ],
+            "guvenlik": [
+                "Sicak suyu dikkatli kullan."
+            ],
+            "adimlar": [
+                "Siseyi soguk suyla doldur, kapagini sikica kapat.",
+                "Sicak suya koy ve gozlemle.",
+                "Kapak acilmaya calisiyor mu not et."
+            ],
+            "tahmin_sorusu": "Isi genlesmeye neden olur mu?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Genlesme gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Isi alan maddeler genlesir, hacimleri artar.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Kapagin tam kapanmamasi"
+            ],
+            "gunluk_yasam_baglantisi": "Termostat, demir yolu raylari",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "isi_transfer",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "IS02",
+            "baslik": "Sicaklik Olcme",
+            "kategori": "isi_sicaklik",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 15,
+            "malzemeler": [
+                "Termometre (varsa)",
+                "Sicak su",
+                "Soğuk su"
+            ],
+            "guvenlik": [
+                "Cam termometre varsa dikkatli ol."
+            ],
+            "adimlar": [
+                "Sicak suyun sicakligini olc.",
+                "Soğuk suyun sicakligini olc.",
+                "Farki hesapla."
+            ],
+            "tahmin_sorusu": "Sicaklik farki ne kadar?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "sicak_c",
+                    "etiket": "Sicak su sicakligi",
+                    "tip": "sayi",
+                    "birim": "C"
+                },
+                {
+                    "anahtar": "soguk_c",
+                    "etiket": "Soğuk su sicakligi",
+                    "tip": "sayi",
+                    "birim": "C"
+                }
+            ],
+            "analiz": {
+                "tur": "formul",
+                "formul": "fark_c = sicak_c - soguk_c",
+                "cikti_sablonu": "Sicaklik farki: {{fark_c}} derece C."
+            },
+            "yaygin_hatalar": [
+                "Termometreyi yanlis okumak"
+            ],
+            "gunluk_yasam_baglantisi": "Hava durumu, hasta sicakligi",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "isi_transfer",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "SD01",
+            "baslik": "Ses Titresimi",
+            "kategori": "ses_dalgalar",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 6
+            },
+            "tahmini_sure_dk": 15,
+            "malzemeler": [
+                "Lastik bant",
+                "Kucuk kutu"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Lastik bandi gerdir.",
+                "Parmaginla titret.",
+                "Titresimi gozlemle ve sesi dinle."
+            ],
+            "tahmin_sorusu": "Ses nasil olusur?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Titresim gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Ses titreşim sonucu olusur. Titresim hava molekullerini hareket ettirir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Lastigin cok gevsek olmasi"
+            ],
+            "gunluk_yasam_baglantisi": "Gitar teli, ses cikaran aletler",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "ses_dalgasi",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "SD02",
+            "baslik": "Ses Yayilimi ve Mesafe",
+            "kategori": "ses_dalgalar",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 20,
+            "malzemeler": [
+                "Zil veya telefon",
+                "Metre"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Zili yakinda cal.",
+                "Uzaga git, tekrar cal.",
+                "Ses siddetini karsilastir."
+            ],
+            "tahmin_sorusu": "Mesafe arttikca ses nasil degisir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "mesafe_m",
+                    "etiket": "Olcum mesafesi",
+                    "tip": "sayi",
+                    "birim": "m"
+                },
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Ses siddeti gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Mesafe arttikca ses enerjisi dagilir ve siddeti azalir.",
+                "cikti_sablonu": "Mesafe: {{mesafe_m}} m. Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Ortamin gurultulu olmasi"
+            ],
+            "gunluk_yasam_baglantisi": "Hoparlor yerlesimi, ses izolasyonu",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "ses_dalgasi",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "IG01",
+            "baslik": "Isigin Yansimasi",
+            "kategori": "isik_gorme",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 20,
+            "malzemeler": [
+                "Kucuk ayna",
+                "El feneri",
+                "Karanlik oda"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Karanlik odada feneri ac.",
+                "Isigi aynaya tut.",
+                "Yansiyan isigi gozlemle."
+            ],
+            "tahmin_sorusu": "Isik aynadan nasil yansir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gelis_acisi",
+                    "etiket": "Gelis acisi (tahmini)",
+                    "tip": "sayi",
+                    "birim": "derece"
+                },
+                {
+                    "anahtar": "yansima_acisi",
+                    "etiket": "Yansima acisi (tahmini)",
+                    "tip": "sayi",
+                    "birim": "derece"
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Gelis acisi yansima acisina esittir (yansima kanunu).",
+                "cikti_sablonu": "Gelis: {{gelis_acisi}}°, Yansima: {{yansima_acisi}}°. Gelis acisi yansima acisina esit olmalidir."
+            },
+            "yaygin_hatalar": [
+                "Acı olcumu"
+            ],
+            "gunluk_yasam_baglantisi": "Ayna, reflektör",
+            "animasyon": {
+                "tur": "canvas",
+                "ozel_mi": true,
+                "sahneler": [
+                    {
+                        "sure_ms": 1400,
+                        "metin": "Isik kaynagi hazirlaniyor...",
+                        "ogeler": [
+                            {
+                                "tur": "daire",
+                                "x": 150,
+                                "y": 120,
+                                "r": 20,
+                                "renk": "#ffeb3b",
+                                "anim": "titre",
+                                "hiz": 1.5
+                            }
+                        ]
+                    },
+                    {
+                        "sure_ms": 1800,
+                        "metin": "Isik aynaya dogru yayiliyor...",
+                        "ogeler": [
+                            {
+                                "tur": "daire",
+                                "x": 150,
+                                "y": 120,
+                                "r": 20,
+                                "renk": "#ffeb3b",
+                                "anim": "titre",
+                                "hiz": 1.5
+                            },
+                            {
+                                "tur": "ok",
+                                "x": 170,
+                                "y": 120,
+                                "w": 150,
+                                "h": 0,
+                                "renk": "#ffeb3b",
+                                "anim": "kaydir",
+                                "hiz": 1.2,
+                                "yon": "sag"
+                            },
+                            {
+                                "tur": "ayna",
+                                "x": 370,
+                                "y": 120,
+                                "w": 10,
+                                "h": 80,
+                                "renk": "#c0c0c0",
+                                "anim": ""
+                            }
+                        ]
+                    },
+                    {
+                        "sure_ms": 2000,
+                        "metin": "Isik aynadan yansiyor: Gelis acisi = Yansima acisi",
+                        "ogeler": [
+                            {
+                                "tur": "daire",
+                                "x": 150,
+                                "y": 120,
+                                "r": 20,
+                                "renk": "#ffeb3b",
+                                "anim": "titre",
+                                "hiz": 1.5
+                            },
+                            {
+                                "tur": "cizgi",
+                                "x": 170,
+                                "y": 120,
+                                "w": 200,
+                                "h": -60,
+                                "renk": "#ffeb3b",
+                                "anim": "",
+                                "kalinlik": 3
+                            },
+                            {
+                                "tur": "ayna",
+                                "x": 370,
+                                "y": 120,
+                                "w": 10,
+                                "h": 80,
+                                "renk": "#c0c0c0",
+                                "anim": ""
+                            },
+                            {
+                                "tur": "cizgi",
+                                "x": 370,
+                                "y": 120,
+                                "w": -200,
+                                "h": -60,
+                                "renk": "#ffeb3b",
+                                "anim": "kaydir",
+                                "hiz": 1.0,
+                                "yon": "sol",
+                                "kalinlik": 3
+                            }
+                        ]
+                    },
+                    {
+                        "sure_ms": 1600,
+                        "metin": "Yansima kanunu: Gelis acisi yansima acisina esittir",
+                        "ogeler": [
+                            {
+                                "tur": "daire",
+                                "x": 150,
+                                "y": 120,
+                                "r": 15,
+                                "renk": "#ffeb3b",
+                                "anim": "titre",
+                                "hiz": 2.0
+                            },
+                            {
+                                "tur": "cizgi",
+                                "x": 170,
+                                "y": 120,
+                                "w": 200,
+                                "h": -60,
+                                "renk": "#ffeb3b",
+                                "anim": "",
+                                "kalinlik": 2
+                            },
+                            {
+                                "tur": "ayna",
+                                "x": 370,
+                                "y": 120,
+                                "w": 8,
+                                "h": 80,
+                                "renk": "#c0c0c0",
+                                "anim": ""
+                            },
+                            {
+                                "tur": "cizgi",
+                                "x": 370,
+                                "y": 120,
+                                "w": -200,
+                                "h": -60,
+                                "renk": "#ffeb3b",
+                                "anim": "",
+                                "kalinlik": 2
+                            },
+                            {
+                                "tur": "dikdortgen",
+                                "x": 260,
+                                "y": 50,
+                                "w": 80,
+                                "h": 20,
+                                "renk": "#333333",
+                                "anim": "ziplat",
+                                "hiz": 0.5
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "kimlik": "IG02",
+            "baslik": "Isigin Kirilmasi",
+            "kategori": "isik_gorme",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 25,
+            "malzemeler": [
+                "Seffaf bardak",
+                "Su",
+                "Kalem"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Bardaga su koy.",
+                "Bardagin yanindan kalemi gozlemle.",
+                "Kalem kirik gorunuyor mu not et."
+            ],
+            "tahmin_sorusu": "Isik farkli ortamlarda nasil davranir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Kirilma gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Isik farkli yogunluklu ortamlardan gecerken kirilir (kırılma).",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Bardagin seffaf olmamasi"
+            ],
+            "gunluk_yasam_baglantisi": "Su altinda gozleme, mercek",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "isik_isini",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "BA01",
+            "baslik": "Basinc ve Alan",
+            "kategori": "basinc",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 20,
+            "malzemeler": [
+                "Hamur veya kil",
+                "Cetvel"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Hamurdan iki parca yap.",
+                "Birini genis yuzeyle, digerini dar yuzeyle yere bas.",
+                "Hangi durumda daha derin iz kaldigini gozlemle."
+            ],
+            "tahmin_sorusu": "Alan basinci nasil etkiler?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "genis_alan_cm2",
+                    "etiket": "Genis yuzey alani (tahmini)",
+                    "tip": "sayi",
+                    "birim": "cm2"
+                },
+                {
+                    "anahtar": "dar_alan_cm2",
+                    "etiket": "Dar yuzey alani (tahmini)",
+                    "tip": "sayi",
+                    "birim": "cm2"
+                },
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Iz derinligi gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Ayni kuvvetle, kucuk alanda daha fazla basinc olusur (P = F/A).",
+                "cikti_sablonu": "Genis: {{genis_alan_cm2}} cm2, Dar: {{dar_alan_cm2}} cm2. Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Kuvveti esit tutamamak"
+            ],
+            "gunluk_yasam_baglantisi": "Kis lastikleri, kar ayakkabisi",
+            "animasyon": {
+                "tur": "canvas",
+                "ozel_mi": true,
+                "sahneler": [
+                    {
+                        "sure_ms": 1200,
+                        "metin": "Iki farkli alan hazirlaniyor...",
+                        "ogeler": [
+                            {
+                                "tur": "dikdortgen",
+                                "x": 150,
+                                "y": 140,
+                                "w": 100,
+                                "h": 25,
+                                "renk": "#ffffff",
+                                "anim": ""
+                            },
+                            {
+                                "tur": "dikdortgen",
+                                "x": 350,
+                                "y": 140,
+                                "w": 40,
+                                "h": 25,
+                                "renk": "#ffffff",
+                                "anim": ""
+                            }
+                        ]
+                    },
+                    {
+                        "sure_ms": 1500,
+                        "metin": "Ayni kuvvet uygulaniyor...",
+                        "ogeler": [
+                            {
+                                "tur": "dikdortgen",
+                                "x": 150,
+                                "y": 140,
+                                "w": 100,
+                                "h": 25,
+                                "renk": "#ffffff",
+                                "anim": ""
+                            },
+                            {
+                                "tur": "dikdortgen",
+                                "x": 350,
+                                "y": 140,
+                                "w": 40,
+                                "h": 25,
+                                "renk": "#ffffff",
+                                "anim": ""
+                            },
+                            {
+                                "tur": "dikdortgen",
+                                "x": 150,
+                                "y": 110,
+                                "w": 80,
+                                "h": 30,
+                                "renk": "#8b4513",
+                                "anim": "dus",
+                                "hiz": 1.0
+                            },
+                            {
+                                "tur": "dikdortgen",
+                                "x": 350,
+                                "y": 110,
+                                "w": 80,
+                                "h": 30,
+                                "renk": "#8b4513",
+                                "anim": "dus",
+                                "hiz": 1.0
+                            }
+                        ]
+                    },
+                    {
+                        "sure_ms": 2000,
+                        "metin": "Basinc farki: Kucuk alan daha derin iz birakiyor",
+                        "ogeler": [
+                            {
+                                "tur": "dikdortgen",
+                                "x": 150,
+                                "y": 140,
+                                "w": 100,
+                                "h": 25,
+                                "renk": "#ffffff",
+                                "anim": ""
+                            },
+                            {
+                                "tur": "dikdortgen",
+                                "x": 350,
+                                "y": 140,
+                                "w": 40,
+                                "h": 25,
+                                "renk": "#ffffff",
+                                "anim": ""
+                            },
+                            {
+                                "tur": "dikdortgen",
+                                "x": 150,
+                                "y": 165,
+                                "w": 100,
+                                "h": 8,
+                                "renk": "#555555",
+                                "anim": ""
+                            },
+                            {
+                                "tur": "dikdortgen",
+                                "x": 350,
+                                "y": 165,
+                                "w": 40,
+                                "h": 20,
+                                "renk": "#555555",
+                                "anim": ""
+                            },
+                            {
+                                "tur": "ok",
+                                "x": 200,
+                                "y": 175,
+                                "w": 20,
+                                "h": 0,
+                                "renk": "#666666",
+                                "anim": "",
+                                "yon": "asagi"
+                            },
+                            {
+                                "tur": "ok",
+                                "x": 370,
+                                "y": 187,
+                                "w": 20,
+                                "h": 0,
+                                "renk": "#666666",
+                                "anim": "",
+                                "yon": "asagi"
+                            }
+                        ]
+                    },
+                    {
+                        "sure_ms": 1500,
+                        "metin": "P = F/A: Kucuk alan, daha fazla basinc",
+                        "ogeler": [
+                            {
+                                "tur": "cizgi",
+                                "x": 100,
+                                "y": 50,
+                                "w": 400,
+                                "h": 0,
+                                "renk": "#cccccc",
+                                "anim": ""
+                            },
+                            {
+                                "tur": "dikdortgen",
+                                "x": 200,
+                                "y": 180,
+                                "w": 60,
+                                "h": 30,
+                                "renk": "#4a90e2",
+                                "anim": "titre",
+                                "hiz": 2.0
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "kimlik": "BM01",
+            "baslik": "Kaldiraç (Menteşe ve Cetvel)",
+            "kategori": "basit_makineler",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 25,
+            "malzemeler": [
+                "Cetvel",
+                "Kalem (destek)",
+                "Kucuk agirliklar"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Cetveli kalem uzerine yerlestir (destek noktasi).",
+                "Bir ucuna agirlik koy.",
+                "Diger ucundan kaldirmaya calis."
+            ],
+            "tahmin_sorusu": "Destek noktasi kuvveti nasil etkiler?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "agirlik_konumu_cm",
+                    "etiket": "Agirlik destek mesafesi",
+                    "tip": "sayi",
+                    "birim": "cm"
+                },
+                {
+                    "anahtar": "kuvvet_konumu_cm",
+                    "etiket": "Kuvvet destek mesafesi",
+                    "tip": "sayi",
+                    "birim": "cm"
+                },
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Kaldirma gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Destek noktasindan uzaga kuvvet uygulanirsa, daha az kuvvetle agirlik kaldirilabilir.",
+                "cikti_sablonu": "Agirlik mesafe: {{agirlik_konumu_cm}} cm, Kuvvet mesafe: {{kuvvet_konumu_cm}} cm. Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Destek noktasinin kaymasi"
+            ],
+            "gunluk_yasam_baglantisi": "Tirpan, makas, pense",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "makine",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "BS01",
+            "baslik": "Gozlem ve Hipotez",
+            "kategori": "bilimsel_surec",
+            "sinif_araligi": {
+                "en_az": 5,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 30,
+            "malzemeler": [
+                "Herhangi bir deney seti"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Deneyi yap.",
+                "Gozlemlerini not et.",
+                "Sonuclara gore hipotez olustur."
+            ],
+            "tahmin_sorusu": "Ne gozlemledin? Bunun nedeni ne olabilir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlemler",
+                    "etiket": "Gozlemler",
+                    "tip": "yazi",
+                    "birim": ""
+                },
+                {
+                    "anahtar": "hipotez",
+                    "etiket": "Hipotez",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Bilimsel surec: Gozlem -> Hipotez -> Deney -> Sonuc -> Yorum.",
+                "cikti_sablonu": "Gozlemler: {{gozlemler}} | Hipotez: {{hipotez}}"
+            },
+            "yaygin_hatalar": [
+                "Oznel gozlemler"
+            ],
+            "gunluk_yasam_baglantisi": "Bilimsel arastirma yontemi",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "gozlem",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "BS02",
+            "baslik": "Veri Toplama ve Tablo",
+            "kategori": "bilimsel_surec",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 35,
+            "malzemeler": [
+                "Kagit",
+                "Kalem",
+                "Cetvel"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Deneyi 3-5 kez tekrarla.",
+                "Her denemede sonuclari not et.",
+                "Tabloya yaz."
+            ],
+            "tahmin_sorusu": "Tekrar edilen deneyler ayni sonucu verir mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "deneme_sayisi",
+                    "etiket": "Deneme sayisi",
+                    "tip": "sayi",
+                    "birim": "adet"
+                },
+                {
+                    "anahtar": "gozlemler",
+                    "etiket": "Sonuclar (virgulle ayir)",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Bilimsel deneyler tekrarlanabilir olmalidir ve benzer sonuclar vermelidir.",
+                "cikti_sablonu": "Deneme sayisi: {{deneme_sayisi}}. Sonuclar: {{gozlemler}}"
+            },
+            "yaygin_hatalar": [
+                "Kontrollu degiskenleri korumamak"
+            ],
+            "gunluk_yasam_baglantisi": "Arastirma metodolojisi",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "gozlem",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "EN03",
+            "baslik": "Ruzgar Gucu (Ruzgar Tirbunu)",
+            "kategori": "enerji",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 30,
+            "malzemeler": [
+                "Kagit",
+                "Makas",
+                "Kalem",
+                "Ip"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Kagittan tirbun yap.",
+                "Ruzgara veya vantilatore tut.",
+                "Donusunu gozlemle."
+            ],
+            "tahmin_sorusu": "Hava akimi enerjiye nasil donusur?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "donus_sayisi",
+                    "etiket": "1 dakikada donus sayisi",
+                    "tip": "sayi",
+                    "birim": "donus"
+                },
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Enerji donusumu gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Hareket enerjisi (ruzgar) mekanik enerjiye (donme) donusur.",
+                "cikti_sablonu": "Donus: {{donus_sayisi}} donus/dakika. Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Tirbunun dengeli olmamasi"
+            ],
+            "gunluk_yasam_baglantisi": "Ruzgar tirbunleri, enerji uretimi",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "top_sekme",
+                "ayarlar": {
+                    "baslangic_yukseklik": 150
+                }
+            }
+        },
+        {
+            "kimlik": "MO04",
+            "baslik": "Maddelerin Sertlik ve Yumusaklik Testi",
+            "kategori": "madde_ozellikleri",
+            "sinif_araligi": {
+                "en_az": 5,
+                "en_cok": 6
+            },
+            "tahmini_sure_dk": 15,
+            "malzemeler": [
+                "Tas",
+                "Cam",
+                "Ahsap",
+                "Plastik",
+                "Metal",
+                "Cetvel"
+            ],
+            "guvenlik": [
+                "Kesici ve kirilgan malzemeleri dikkatli kullan."
+            ],
+            "adimlar": [
+                "Farkli maddeleri topla.",
+                "Her birini parmaginla basin, sertliklerini test et.",
+                "Sonuclari karsilastir ve not al."
+            ],
+            "tahmin_sorusu": "Hangi maddeler daha sert, hangileri daha yumusak?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Sertlik gozlemleri",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Farkli maddeler farkli sertlik seviyelerine sahiptir. Sertlik maddenin ozelliklerinden biridir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Cok fazla basinc uygulamak"
+            ],
+            "gunluk_yasam_baglantisi": "Sert yuzeyler, yumusak yataklar",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "yogunluk",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "MO05",
+            "baslik": "Maddelerin Renk ve Seffaflik Testi",
+            "kategori": "madde_ozellikleri",
+            "sinif_araligi": {
+                "en_az": 5,
+                "en_cok": 6
+            },
+            "tahmini_sure_dk": 12,
+            "malzemeler": [
+                "Cam bardak",
+                "Plastik bardak",
+                "Metal kutu",
+                "Kagit",
+                "El feneri"
+            ],
+            "guvenlik": [
+                "Cam malzemeleri dikkatli kullan."
+            ],
+            "adimlar": [
+                "Malzemeleri topla.",
+                "Her birinin arkasina feneri tut, isigin gecip gecmedigini gozlemle.",
+                "Renklerini ve seffafliklerini not et."
+            ],
+            "tahmin_sorusu": "Hangi maddeler isigi gecirir, hangileri gecirmez?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Seffaflik ve renk gozlemleri",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Seffaf maddeler isigi gecirir, opak maddeler gecirmez. Maddenin rengi onun ozelliklerinden biridir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Fenerin isigini yeterince guclu tutmamak"
+            ],
+            "gunluk_yasam_baglantisi": "Pencereler, cam sise, opak kagitlar",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "yogunluk",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "MO06",
+            "baslik": "Maddelerin Agirlik Karsilastirmasi",
+            "kategori": "madde_ozellikleri",
+            "sinif_araligi": {
+                "en_az": 5,
+                "en_cok": 6
+            },
+            "tahmini_sure_dk": 18,
+            "malzemeler": [
+                "Farkli boyutlarda taslar",
+                "Ahsap",
+                "Plastik oyuncak",
+                "Metal para",
+                "Tartı (varsa)"
+            ],
+            "guvenlik": [
+                "Agir objeleri dikkatli kaldir."
+            ],
+            "adimlar": [
+                "Farkli maddelerden objeleri topla.",
+                "Her birini elinde tart, agirliklarini karsilastir.",
+                "Sonuclari not et."
+            ],
+            "tahmin_sorusu": "Hangi maddeler daha agir, hangileri daha hafif?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Agirlik karsilastirma gozlemleri",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Farkli maddeler ayni hacimde farkli agirliklara sahip olabilir. Bu yogunluk farkindan kaynaklanir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Objelerin hacmini goz onune almamak"
+            ],
+            "gunluk_yasam_baglantisi": "Yuk tasima, agirlik olcumu",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "yogunluk",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "MO07",
+            "baslik": "Katilarin Sekil ve Hacim",
+            "kategori": "madde_ozellikleri",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 25,
+            "malzemeler": [
+                "Kucuk kutu",
+                "Top",
+                "Tas",
+                "Su",
+                "Dereceli kap"
+            ],
+            "guvenlik": [
+                "Suyu dokmemeye dikkat et."
+            ],
+            "adimlar": [
+                "Farkli sekilli cisimleri topla.",
+                "Her birinin sekline bak ve not et.",
+                "Hacimlerini karsilastir (tartirma yontemi ile)."
+            ],
+            "tahmin_sorusu": "Sekil degisse de hacim degisir mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "hacim_ml",
+                    "etiket": "Olculen hacim",
+                    "tip": "sayi",
+                    "birim": "mL"
+                },
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Sekil gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Katilarin belirli sekil ve hacimleri vardir. Sekil degisse de hacim korunur.",
+                "cikti_sablonu": "Hacim: {{hacim_ml}} mL. Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Cismi tam batirmamak"
+            ],
+            "gunluk_yasam_baglantisi": "Esya depolama, hacim olcumu",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "yogunluk",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "MO08",
+            "baslik": "Sivilarin Sekilsizligi",
+            "kategori": "madde_ozellikleri",
+            "sinif_araligi": {
+                "en_az": 5,
+                "en_cok": 6
+            },
+            "tahmini_sure_dk": 15,
+            "malzemeler": [
+                "Su",
+                "Sivi yag",
+                "Farkli sekilli kaplar",
+                "Cetvel"
+            ],
+            "guvenlik": [
+                "Dokulmeye karsi dikkatli ol."
+            ],
+            "adimlar": [
+                "Suyu farkli sekilli kaplara dok.",
+                "Her kaptaki sekle bak ve gozlemle.",
+                "Sonuclari karsilastir."
+            ],
+            "tahmin_sorusu": "Sivi farkli kaplarda farkli sekil alir mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Sekil gozlemleri",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Sivilar belirli sekle sahip degildir, bulunduklari kabin seklini alirlar. Hacimleri sabittir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Miktari esit tutamamak"
+            ],
+            "gunluk_yasam_baglantisi": "Sivi dokme, kap tasima",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "yogunluk",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "MO09",
+            "baslik": "Gazlarin Gorusmezligi",
+            "kategori": "madde_ozellikleri",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 20,
+            "malzemeler": [
+                "Seffaf sise",
+                "Su",
+                "Pompalanabilir oyuncak"
+            ],
+            "guvenlik": [
+                "Siseyi kirmamaya dikkat et."
+            ],
+            "adimlar": [
+                "Siseyi suyla doldur, ters cevir.",
+                "Hava kabarciklarinin ciktigini gozlemle.",
+                "Havanin varligini not et."
+            ],
+            "tahmin_sorusu": "Hava gorusur mu? Havanin varligini nasil anlariz?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Hava varligi gozlemleri",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Gazlar gorusmezdir ama vardirlar. Hacimleri sabit degildir, bulunduklari kabin hacmini alirlar.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Siseyi tam doldurmamak"
+            ],
+            "gunluk_yasam_baglantisi": "Hava balonlari, nefes alma",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "yogunluk",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "MO10",
+            "baslik": "Maddelerin Miktar ve Kitle Iliskisi",
+            "kategori": "madde_ozellikleri",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 22,
+            "malzemeler": [
+                "Kum",
+                "Su",
+                "Iki esit kap",
+                "Cetvel"
+            ],
+            "guvenlik": [
+                "Dokulmeye karsi dikkatli ol."
+            ],
+            "adimlar": [
+                "Iki esit kaba farkli miktarlarda kum koy.",
+                "Her birini elinde tart, agirliklarini karsilastir.",
+                "Miktar ile agirlik arasindaki iliskiyi gozlemle."
+            ],
+            "tahmin_sorusu": "Miktar arttikca agirlik artar mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "miktar_tahmini",
+                    "etiket": "Miktar tahmini",
+                    "tip": "sayi",
+                    "birim": "birim"
+                },
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Agirlik gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Ayni maddeden miktar arttikca agirlik da artar. Bu dogru orantilidir.",
+                "cikti_sablonu": "Miktar: {{miktar_tahmini}}. Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Miktari esit tutamamak"
+            ],
+            "gunluk_yasam_baglantisi": "Alisveris, agirlik olcumu",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "yogunluk",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "KH04",
+            "baslik": "Kuvvet Yonune Gore Hareket",
+            "kategori": "kuvvet_hareket",
+            "sinif_araligi": {
+                "en_az": 5,
+                "en_cok": 6
+            },
+            "tahmini_sure_dk": 12,
+            "malzemeler": [
+                "Oyuncak araba",
+                "Duz zemin",
+                "Cetvel"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Araci farkli yonlerde it.",
+                "Her yonde gittigi mesafeyi olc.",
+                "Kuvvet yonu ile hareket yonu arasindaki iliskiyi gozlemle."
+            ],
+            "tahmin_sorusu": "Kuvvet hangi yone uygulanirsa cisim o yone mu gider?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Hareket yonu gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Kuvvet hangi yone uygulanirsa cisim o yone hareket eder.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Zeminin egimli olmasi"
+            ],
+            "gunluk_yasam_baglantisi": "Araba surme, itme cekme",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "hareket",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "KH05",
+            "baslik": "Kuvvet Siddeti ve Hizlanma",
+            "kategori": "kuvvet_hareket",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 18,
+            "malzemeler": [
+                "Top",
+                "Duz zemin",
+                "Metre"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Topu hafifce yuvarla, gittigi mesafeyi olc.",
+                "Topu daha sert yuvarla, gittigi mesafeyi olc.",
+                "Kuvvet siddeti ile mesafe arasindaki iliskiyi gozlemle."
+            ],
+            "tahmin_sorusu": "Kuvvet siddeti arttikca hareket nasil degisir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "hafif_mesafe_cm",
+                    "etiket": "Hafif itme mesafesi",
+                    "tip": "sayi",
+                    "birim": "cm"
+                },
+                {
+                    "anahtar": "sert_mesafe_cm",
+                    "etiket": "Sert itme mesafesi",
+                    "tip": "sayi",
+                    "birim": "cm"
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Kuvvet siddeti arttikca cisim daha hizli hareket eder ve daha uzun mesafe gider.",
+                "cikti_sablonu": "Hafif: {{hafif_mesafe_cm}} cm, Sert: {{sert_mesafe_cm}} cm. Kuvvet artisi hizi artirir."
+            },
+            "yaygin_hatalar": [
+                "Kuvveti esit tutamamak"
+            ],
+            "gunluk_yasam_baglantisi": "Araba gaza basma, top atma",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "hareket",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "KH06",
+            "baslik": "Denge ve Destek Noktasi",
+            "kategori": "kuvvet_hareket",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 20,
+            "malzemeler": [
+                "Cetvel",
+                "Kalem",
+                "Kucuk agirliklar"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Cetveli kalem uzerine yerlestir.",
+                "Cetvelin dengede durup durmadigini gozlemle.",
+                "Agirliklari farkli konumlara koy, dengeyi gozlemle."
+            ],
+            "tahmin_sorusu": "Denge icin destek noktasi nerede olmalidir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "destek_konumu_cm",
+                    "etiket": "Destek konumu",
+                    "tip": "sayi",
+                    "birim": "cm"
+                },
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Denge gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Denge icin destek noktasi agirlik merkezi uzerinde olmalidir.",
+                "cikti_sablonu": "Destek: {{destek_konumu_cm}} cm. Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Cetvelin kaymasi"
+            ],
+            "gunluk_yasam_baglantisi": "Denge oyunlari, tahterevalli",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "hareket",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "KH07",
+            "baslik": "Carpisma ve Yon Degisimi",
+            "kategori": "kuvvet_hareket",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 22,
+            "malzemeler": [
+                "Iki top",
+                "Duz zemin"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Iki topu birbirine dogru yuvarla.",
+                "Carpisma anini gozlemle.",
+                "Carpisma sonrasi yon degisimlerini not et."
+            ],
+            "tahmin_sorusu": "Cisimler carpisinca ne olur?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Carpisma gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Carpisma sirasinda kuvvetler etkilesir ve cisimlerin yonleri degisebilir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Hizlari esit tutamamak"
+            ],
+            "gunluk_yasam_baglantisi": "Bilardo, top carpismalari",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "hareket",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "KH08",
+            "baslik": "Agirlik ve Kuvvet Iliskisi",
+            "kategori": "kuvvet_hareket",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 16,
+            "malzemeler": [
+                "Farkli agirliklarda objeler",
+                "Balkon veya yuksek yer"
+            ],
+            "guvenlik": [
+                "Yuksekten dusmemeye dikkat et."
+            ],
+            "adimlar": [
+                "Farkli agirliklarda objeleri topla.",
+                "Her birini asagiya birak, dusme hizlarini karsilastir.",
+                "Agirlik ile dusme hizi arasindaki iliskiyi gozlemle."
+            ],
+            "tahmin_sorusu": "Agir cisimler daha hizli mi duser?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Dusme hizi gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Havada surtunme yoksa tum cisimler ayni hizda duser, agirlik fark etmez.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Hava direncinin etkisini goz ardı etmek"
+            ],
+            "gunluk_yasam_baglantisi": "Para atma, dusme olaylari",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "hareket",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "KH09",
+            "baslik": "Hareket Hizi ve Mesafe",
+            "kategori": "kuvvet_hareket",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 25,
+            "malzemeler": [
+                "Oyuncak araba",
+                "Duz zemin",
+                "Zamanlayici (varsa)",
+                "Metre"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Araci yavas yuvarla, gittigi mesafeyi ve gecen sureyi olc.",
+                "Araci hizli yuvarla, gittigi mesafeyi ve gecen sureyi olc.",
+                "Hiz ile mesafe arasindaki iliskiyi hesapla."
+            ],
+            "tahmin_sorusu": "Hiz arttikca ayni surede gidilen mesafe artar mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "yavas_mesafe_cm",
+                    "etiket": "Yavas mesafe",
+                    "tip": "sayi",
+                    "birim": "cm"
+                },
+                {
+                    "anahtar": "hizli_mesafe_cm",
+                    "etiket": "Hizli mesafe",
+                    "tip": "sayi",
+                    "birim": "cm"
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Ayni surede daha hizli hareket eden cisim daha uzun mesafe gider.",
+                "cikti_sablonu": "Yavas: {{yavas_mesafe_cm}} cm, Hizli: {{hizli_mesafe_cm}} cm. Hiz artisi mesafeyi artirir."
+            },
+            "yaygin_hatalar": [
+                "Sureyi esit tutamamak"
+            ],
+            "gunluk_yasam_baglantisi": "Yolculuk, hiz limitleri",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "hareket",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "KH10",
+            "baslik": "Durgunluk ve Hareket Baslangici",
+            "kategori": "kuvvet_hareket",
+            "sinif_araligi": {
+                "en_az": 5,
+                "en_cok": 6
+            },
+            "tahmini_sure_dk": 14,
+            "malzemeler": [
+                "Top",
+                "Oyuncak araba",
+                "Masa"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Durgun bir cismi gozlemle.",
+                "Cisme kuvvet uygula, hareket baslangicini gozlemle.",
+                "Hareket baslatmak icin kuvvet gerektigini not et."
+            ],
+            "tahmin_sorusu": "Durgun bir cismi hareket ettirmek icin ne gerekir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Hareket baslangici gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Durgun bir cismi hareket ettirmek icin kuvvet uygulanmalidir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Cismin zaten hareketli olmasi"
+            ],
+            "gunluk_yasam_baglantisi": "Araba calistirma, top atma",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "hareket",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "SU03",
+            "baslik": "Yag ve Surtunme",
+            "kategori": "surtunme",
+            "sinif_araligi": {
+                "en_az": 5,
+                "en_cok": 6
+            },
+            "tahmini_sure_dk": 18,
+            "malzemeler": [
+                "Oyuncak araba",
+                "Yag veya sabun",
+                "Duz zemin",
+                "Metre"
+            ],
+            "guvenlik": [
+                "Yagi temizlemeye dikkat et."
+            ],
+            "adimlar": [
+                "Yuzeyi yagsiz durumda test et, mesafeyi olc.",
+                "Yuzeye yag sur, tekrar test et, mesafeyi olc.",
+                "Yag etkisini karsilastir."
+            ],
+            "tahmin_sorusu": "Yag surtunmeyi artirir mi azaltir mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "yagsiz_mesafe_cm",
+                    "etiket": "Yagsiz mesafe",
+                    "tip": "sayi",
+                    "birim": "cm"
+                },
+                {
+                    "anahtar": "yagli_mesafe_cm",
+                    "etiket": "Yagli mesafe",
+                    "tip": "sayi",
+                    "birim": "cm"
+                }
+            ],
+            "analiz": {
+                "tur": "formul",
+                "formul": "fark_cm = yagli_mesafe_cm - yagsiz_mesafe_cm",
+                "cikti_sablonu": "Fark: {{fark_cm}} cm. Yag surtunmeyi azaltir, cisim daha uzun mesafe gider."
+            },
+            "yaygin_hatalar": [
+                "Yagin esit surulmemesi"
+            ],
+            "gunluk_yasam_baglantisi": "Makine yaglama, kayak",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "surtunme",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "SU04",
+            "baslik": "Yuzey Purtuzlulugu ve Surtunme",
+            "kategori": "surtunme",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 20,
+            "malzemeler": [
+                "Oyuncak araba",
+                "Zimpara kagidi",
+                "Cam yuzey",
+                "Metre"
+            ],
+            "guvenlik": [
+                "Zimpara kagidina dikkatli dokun."
+            ],
+            "adimlar": [
+                "Purtuzlu yuzeyde (zimpara) mesafeyi olc.",
+                "Purtuzsuz yuzeyde (cam) mesafeyi olc.",
+                "Purtuzluluk etkisini karsilastir."
+            ],
+            "tahmin_sorusu": "Purtuzlu yuzeylerde surtunme daha fazla mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "purtuzlu_mesafe_cm",
+                    "etiket": "Purtuzlu yuzey mesafesi",
+                    "tip": "sayi",
+                    "birim": "cm"
+                },
+                {
+                    "anahtar": "purtuzsuz_mesafe_cm",
+                    "etiket": "Purtuzsuz yuzey mesafesi",
+                    "tip": "sayi",
+                    "birim": "cm"
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Purtuzlu yuzeylerde surtunme daha fazladir, cisim daha az mesafe gider.",
+                "cikti_sablonu": "Purtuzlu: {{purtuzlu_mesafe_cm}} cm, Purtuzsuz: {{purtuzsuz_mesafe_cm}} cm. Purtuzluluk surtunmeyi artirir."
+            },
+            "yaygin_hatalar": [
+                "Baslatma kuvvetini esit tutamamak"
+            ],
+            "gunluk_yasam_baglantisi": "Yol yuzeyleri, spor ayakkabilar",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "surtunme",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "SU05",
+            "baslik": "Agirlik ve Surtunme",
+            "kategori": "surtunme",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 22,
+            "malzemeler": [
+                "Iki farkli agirlikta kutu",
+                "Duz zemin",
+                "Metre"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Hafif kutuyu ayni kuvvetle it, mesafeyi olc.",
+                "Agir kutuyu ayni kuvvetle it, mesafeyi olc.",
+                "Agirlik ile surtunme arasindaki iliskiyi gozlemle."
+            ],
+            "tahmin_sorusu": "Agir cisimlerde surtunme daha fazla mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "hafif_mesafe_cm",
+                    "etiket": "Hafif kutu mesafesi",
+                    "tip": "sayi",
+                    "birim": "cm"
+                },
+                {
+                    "anahtar": "agir_mesafe_cm",
+                    "etiket": "Agir kutu mesafesi",
+                    "tip": "sayi",
+                    "birim": "cm"
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Agirlik arttikca surtunme artar, cisim daha az mesafe gider.",
+                "cikti_sablonu": "Hafif: {{hafif_mesafe_cm}} cm, Agir: {{agir_mesafe_cm}} cm. Agirlik surtunmeyi artirir."
+            },
+            "yaygin_hatalar": [
+                "Kuvveti esit tutamamak"
+            ],
+            "gunluk_yasam_baglantisi": "Agir yuk tasima, tasit agirligi",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "surtunme",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "SU06",
+            "baslik": "Kum ve Surtunme",
+            "kategori": "surtunme",
+            "sinif_araligi": {
+                "en_az": 5,
+                "en_cok": 6
+            },
+            "tahmini_sure_dk": 16,
+            "malzemeler": [
+                "Oyuncak araba",
+                "Kum",
+                "Duz zemin",
+                "Metre"
+            ],
+            "guvenlik": [
+                "Kumu temizlemeye dikkat et."
+            ],
+            "adimlar": [
+                "Araci normal yuzeyde test et, mesafeyi olc.",
+                "Yuzeye kum dok, tekrar test et, mesafeyi olc.",
+                "Kum etkisini karsilastir."
+            ],
+            "tahmin_sorusu": "Kumlu yuzeyde surtunme nasil degisir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "normal_mesafe_cm",
+                    "etiket": "Normal yuzey mesafesi",
+                    "tip": "sayi",
+                    "birim": "cm"
+                },
+                {
+                    "anahtar": "kumlu_mesafe_cm",
+                    "etiket": "Kumlu yuzey mesafesi",
+                    "tip": "sayi",
+                    "birim": "cm"
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Kumlu yuzeylerde surtunme artar, cisim daha az mesafe gider.",
+                "cikti_sablonu": "Normal: {{normal_mesafe_cm}} cm, Kumlu: {{kumlu_mesafe_cm}} cm. Kum surtunmeyi artirir."
+            },
+            "yaygin_hatalar": [
+                "Kumun esit dagitilmamasi"
+            ],
+            "gunluk_yasam_baglantisi": "Plajda yurume, arazi araclari",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "surtunme",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "SU07",
+            "baslik": "Hareket Hizi ve Surtunme",
+            "kategori": "surtunme",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 19,
+            "malzemeler": [
+                "Top",
+                "Duz zemin",
+                "Metre"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Topu yavas yuvarla, durdugu yeri olc.",
+                "Topu hizli yuvarla, durdugu yeri olc.",
+                "Hiz ile surtunme etkisini karsilastir."
+            ],
+            "tahmin_sorusu": "Hizli hareket eden cisimler daha uzun mesafe gider mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "yavas_mesafe_cm",
+                    "etiket": "Yavas mesafe",
+                    "tip": "sayi",
+                    "birim": "cm"
+                },
+                {
+                    "anahtar": "hizli_mesafe_cm",
+                    "etiket": "Hizli mesafe",
+                    "tip": "sayi",
+                    "birim": "cm"
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Daha hizli hareket eden cisim daha fazla momentum tasir, surtunmeye ragmen daha uzun mesafe gider.",
+                "cikti_sablonu": "Yavas: {{yavas_mesafe_cm}} cm, Hizli: {{hizli_mesafe_cm}} cm. Hiz artisi mesafeyi artirir."
+            },
+            "yaygin_hatalar": [
+                "Baslangic hizini esit tutamamak"
+            ],
+            "gunluk_yasam_baglantisi": "Araba hizi, fren mesafesi",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "surtunme",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "SU08",
+            "baslik": "Suyun Surtunme Etkisi",
+            "kategori": "surtunme",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 21,
+            "malzemeler": [
+                "Oyuncak araba",
+                "Su",
+                "Duz zemin",
+                "Metre"
+            ],
+            "guvenlik": [
+                "Suyu temizlemeye dikkat et."
+            ],
+            "adimlar": [
+                "Araci kuru yuzeyde test et, mesafeyi olc.",
+                "Yuzeye su dok, tekrar test et, mesafeyi olc.",
+                "Su etkisini karsilastir."
+            ],
+            "tahmin_sorusu": "Islak yuzeyde surtunme nasil degisir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "kuru_mesafe_cm",
+                    "etiket": "Kuru yuzey mesafesi",
+                    "tip": "sayi",
+                    "birim": "cm"
+                },
+                {
+                    "anahtar": "islak_mesafe_cm",
+                    "etiket": "Islak yuzey mesafesi",
+                    "tip": "sayi",
+                    "birim": "cm"
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Bazi yuzeylerde su surtunmeyi azaltir, bazi yuzeylerde artirir. Yuzey tipine gore degisir.",
+                "cikti_sablonu": "Kuru: {{kuru_mesafe_cm}} cm, Islak: {{islak_mesafe_cm}} cm. Su etkisi yuzey tipine baglidir."
+            },
+            "yaygin_hatalar": [
+                "Suyun esit dagitilmamasi"
+            ],
+            "gunluk_yasam_baglantisi": "Yagmurda araba, kaygan yuzeyler",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "surtunme",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "SU09",
+            "baslik": "Lastik ve Surtunme",
+            "kategori": "surtunme",
+            "sinif_araligi": {
+                "en_az": 5,
+                "en_cok": 6
+            },
+            "tahmini_sure_dk": 17,
+            "malzemeler": [
+                "Oyuncak araba (lastikli)",
+                "Duz zemin",
+                "Metre"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Araci lastikleri ile test et, mesafeyi olc.",
+                "Lastiklerin yuzey ile temasini gozlemle.",
+                "Lastik etkisini not et."
+            ],
+            "tahmin_sorusu": "Lastikler surtunmeyi nasil etkiler?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Lastik etkisi gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Lastikler yuzey ile daha iyi temas saglar, bu surtunmeyi artirir ve kontrol saglar.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Lastiklerin esit durumda olmamasi"
+            ],
+            "gunluk_yasam_baglantisi": "Araba lastikleri, bisiklet lastikleri",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "surtunme",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "SU10",
+            "baslik": "Surtunme ve Isi Olusumu",
+            "kategori": "surtunme",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 24,
+            "malzemeler": [
+                "Iki tas parcasi",
+                "El"
+            ],
+            "guvenlik": [
+                "Taslari dikkatli kullan."
+            ],
+            "adimlar": [
+                "Iki tas parcasini birbirine surt.",
+                "Surtma sonrasi taslarin sicakligini elinle kontrol et.",
+                "Surtunme ile isi olusumu arasindaki iliskiyi gozlemle."
+            ],
+            "tahmin_sorusu": "Surtunme isi uretir mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Isi olusumu gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Surtunme enerjisi isi enerjisine donusur. Surtunme arttikca daha fazla isi olusur.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Cok kisa sure surtme"
+            ],
+            "gunluk_yasam_baglantisi": "Ates cakmasi, frenlerin isinmasi",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "surtunme",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "EN04",
+            "baslik": "Sicak Su ile Enerji Transferi",
+            "kategori": "enerji",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 20,
+            "malzemeler": [
+                "Iki bardak",
+                "Sicak su",
+                "Soğuk su",
+                "Termometre (varsa)"
+            ],
+            "guvenlik": [
+                "Sicak suyu dikkatli kullan."
+            ],
+            "adimlar": [
+                "Bir bardaga sicak su, digerine soguk su koy.",
+                "Iki bardagi yanyana koy ve sicakliklarini gozlemle.",
+                "Bir sure bekleyip sicaklik degisimlerini not et."
+            ],
+            "tahmin_sorusu": "Sicak su sogur mu? Enerji nasil transfer olur?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Sicaklik degisimi gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Isi enerjisi sicak maddeden soguk maddeye transfer olur. Bu enerji transferidir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Sicaklik olcumunu yanlis yapmak"
+            ],
+            "gunluk_yasam_baglantisi": "Isitma, sogutma sistemleri",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "top_sekme",
+                "ayarlar": {
+                    "baslangic_yukseklik": 150
+                }
+            }
+        },
+        {
+            "kimlik": "EN05",
+            "baslik": "Gunes Enerjisi ve Isinma",
+            "kategori": "enerji",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 30,
+            "malzemeler": [
+                "Iki kucuk kap",
+                "Su",
+                "Siyah kagit",
+                "Beyaz kagit"
+            ],
+            "guvenlik": [
+                "Guneste cok kalmamaya dikkat et."
+            ],
+            "adimlar": [
+                "Iki kaba esit miktarda su koy.",
+                "Birinin altina siyah kagit, digerinin altina beyaz kagit koy.",
+                "Guneste beklet, sicakliklarini karsilastir."
+            ],
+            "tahmin_sorusu": "Hangi kaptaki su daha hizli isinir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Isinma gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Siyah yuzeyler gunes isinlarini daha iyi emer, bu yuzden daha hizli isinir. Bu gunes enerjisinin isi enerjisine donusumudur.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Esit miktar su kullanmamak"
+            ],
+            "gunluk_yasam_baglantisi": "Gunes panelleri, siyah yuzeyler",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "top_sekme",
+                "ayarlar": {
+                    "baslangic_yukseklik": 150
+                }
+            }
+        },
+        {
+            "kimlik": "EN06",
+            "baslik": "Elastik Enerji",
+            "kategori": "enerji",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 18,
+            "malzemeler": [
+                "Lastik bant",
+                "Kucuk top",
+                "Cetvel"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Lastik bandi ger.",
+                "Lastik bandi birak, topu firlat.",
+                "Cekme miktari ile firlatma mesafesi arasindaki iliskiyi gozlemle."
+            ],
+            "tahmin_sorusu": "Lastik bandi ne kadar cok cekersen top ne kadar uzağa gider?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "cekme_cm",
+                    "etiket": "Cekme miktari",
+                    "tip": "sayi",
+                    "birim": "cm"
+                },
+                {
+                    "anahtar": "mesafe_cm",
+                    "etiket": "Firlatma mesafesi",
+                    "tip": "sayi",
+                    "birim": "cm"
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Lastik bandi cekildiginde elastik enerji birikir. Birakilinca bu enerji kinetik enerjiye donusur.",
+                "cikti_sablonu": "Cekme: {{cekme_cm}} cm, Mesafe: {{mesafe_cm}} cm. Cekme artisi mesafeyi artirir."
+            },
+            "yaygin_hatalar": [
+                "Lastigi cok fazla germek"
+            ],
+            "gunluk_yasam_baglantisi": "Yaylar, lastikler, oyuncaklar",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "top_sekme",
+                "ayarlar": {
+                    "baslangic_yukseklik": 150
+                }
+            }
+        },
+        {
+            "kimlik": "EN07",
+            "baslik": "Sallanan Sarkac Enerjisi",
+            "kategori": "enerji",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 22,
+            "malzemeler": [
+                "Ip",
+                "Kucuk agirlik",
+                "Sabit bir nokta"
+            ],
+            "guvenlik": [
+                "Agirligi dikkatli kullan."
+            ],
+            "adimlar": [
+                "Ipe agirlik bagla, sarkit.",
+                "Sarkaci yukari cek ve birak.",
+                "Potansiyel ve kinetik enerji donusumunu gozlemle."
+            ],
+            "tahmin_sorusu": "Sarkac neden durmadan sallanir? Enerji nasil donusur?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Enerji donusumu gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Sarkac yukari cekildiginde potansiyel enerji, asagi inerken kinetik enerji olur. Bu surekli donusur.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Ipin cok uzun veya kisa olmasi"
+            ],
+            "gunluk_yasam_baglantisi": "Sarkac saati, salincak",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "top_sekme",
+                "ayarlar": {
+                    "baslangic_yukseklik": 150
+                }
+            }
+        },
+        {
+            "kimlik": "EN08",
+            "baslik": "Bisiklet Dinamosu ve Enerji",
+            "kategori": "enerji",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 25,
+            "malzemeler": [
+                "Bisiklet (varsa)",
+                "Dinamo lamba",
+                "Gozlem"
+            ],
+            "guvenlik": [
+                "Bisikleti dikkatli kullan."
+            ],
+            "adimlar": [
+                "Bisikletin dinamo lambasini gozlemle.",
+                "Pedal cevirildiginde lambanin yanip yanmadigini gozlemle.",
+                "Hareket enerjisinin elektrik enerjisine donusumunu not et."
+            ],
+            "tahmin_sorusu": "Pedal cevirmek lambayi yakar mi? Enerji nasil donusur?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Enerji donusumu gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Pedal cevirmek mekanik enerji uretir, bu elektrik enerjisine donusur ve lambayi yakar.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Bisikletin olmamasi durumunda gozlem yapamamak"
+            ],
+            "gunluk_yasam_baglantisi": "Dinamo, jenerator, elektrik uretimi",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "top_sekme",
+                "ayarlar": {
+                    "baslangic_yukseklik": 150
+                }
+            }
+        },
+        {
+            "kimlik": "EN09",
+            "baslik": "Rampada Enerji Donusumu",
+            "kategori": "enerji",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 20,
+            "malzemeler": [
+                "Kitaplar",
+                "Duz tahta veya mukavva",
+                "Top",
+                "Cetvel"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Kitaplari ust uste koy, uzerine tahtayi yerlestir (rampa).",
+                "Topu rampanin ustunden birak.",
+                "Potansiyel enerjinin kinetik enerjiye donusumunu gozlemle."
+            ],
+            "tahmin_sorusu": "Rampadan asagi yuvarlanan top neden hizlanir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "yukseklik_cm",
+                    "etiket": "Rampa yuksekligi",
+                    "tip": "sayi",
+                    "birim": "cm"
+                },
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Hizlanma gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Rampadan asagi inerken potansiyel enerji azalir, kinetik enerji artar. Bu yuzden top hizlanir.",
+                "cikti_sablonu": "Yukseklik: {{yukseklik_cm}} cm. Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Rampanin egimini esit tutamamak"
+            ],
+            "gunluk_yasam_baglantisi": "Rampa, kaydirma",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "top_sekme",
+                "ayarlar": {
+                    "baslangic_yukseklik": 120
+                }
+            }
+        },
+        {
+            "kimlik": "EN10",
+            "baslik": "Pil ve Elektrik Enerjisi",
+            "kategori": "enerji",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 23,
+            "malzemeler": [
+                "Pil",
+                "Kucuk ampul",
+                "Tel veya kablo"
+            ],
+            "guvenlik": [
+                "Pili dikkatli kullan, kucuk cocuklar icin yetiskin gozetimi onerilir."
+            ],
+            "adimlar": [
+                "Pil, ampul ve tel baglantisi yap.",
+                "Ampulun yanip yanmadigini gozlemle.",
+                "Kimyasal enerjinin elektrik enerjisine donusumunu not et."
+            ],
+            "tahmin_sorusu": "Pil ampulu yakabilir mi? Enerji nasil donusur?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Elektrik enerjisi gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Pildeki kimyasal enerji elektrik enerjisine donusur ve ampulu yakar.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Baglantiyi yanlis yapmak"
+            ],
+            "gunluk_yasam_baglantisi": "Pil, batarya, elektrikli aletler",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "top_sekme",
+                "ayarlar": {
+                    "baslangic_yukseklik": 150
+                }
+            }
+        },
+        {
+            "kimlik": "IS03",
+            "baslik": "Sicak Su ve Buz Etkilesimi",
+            "kategori": "isi_sicaklik",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 18,
+            "malzemeler": [
+                "Iki bardak",
+                "Sicak su",
+                "Buz",
+                "Termometre (varsa)"
+            ],
+            "guvenlik": [
+                "Sicak suyu dikkatli kullan."
+            ],
+            "adimlar": [
+                "Bir bardaga sicak su koy.",
+                "Uzerine buz koy ve gozlemle.",
+                "Buzun erime hizini ve su sicakligi degisimini not et."
+            ],
+            "tahmin_sorusu": "Buz sicak suda nasil erir? Isi nasil transfer olur?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Erime ve sicaklik gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Sicak su buzun erimesini hizlandirir. Isi enerjisi sicaktan soguga transfer olur.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Miktari esit tutamamak"
+            ],
+            "gunluk_yasam_baglantisi": "Buz eritme, isi transferi",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "isi_transfer",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "IS04",
+            "baslik": "Metal ve Ahsap Isi Iletimi",
+            "kategori": "isi_sicaklik",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 20,
+            "malzemeler": [
+                "Metal kasik",
+                "Ahsap kasik",
+                "Sicak su"
+            ],
+            "guvenlik": [
+                "Sicak suyu dikkatli kullan."
+            ],
+            "adimlar": [
+                "Her iki kasigi sicak suya koy.",
+                "Bir sure bekleyip kasiklari cikar.",
+                "Kasiklarin sicakligini elinle karsilastir."
+            ],
+            "tahmin_sorusu": "Hangi kasik daha hizli isinir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Isinma gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Metal iyi isi iletkenidir, ahsap ise kotu iletkendir. Metal daha hizli isinir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Kasiklari ayni anda cikarmamak"
+            ],
+            "gunluk_yasam_baglantisi": "Tencere sapı, yalitim malzemeleri",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "isi_transfer",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "IS05",
+            "baslik": "Soguk Hava ve Buharlasma",
+            "kategori": "isi_sicaklik",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 22,
+            "malzemeler": [
+                "Bardak",
+                "Sicak su",
+                "Buzlu su"
+            ],
+            "guvenlik": [
+                "Sicak suyu dikkatli kullan."
+            ],
+            "adimlar": [
+                "Bardaga sicak su koy.",
+                "Buzlu su ile bardagin disini ov.",
+                "Buharlasmayi gozlemle."
+            ],
+            "tahmin_sorusu": "Soguk bardak ustunde buhar olusur mu?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Buharlasma gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Sicak su buharlasir. Soguk yuzey ile temas edince buhar yogunlasir ve gozle gorunur hale gelir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Suyun cok sicak olmamasi"
+            ],
+            "gunluk_yasam_baglantisi": "Banyo buharlari, yogunlasma",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "isi_transfer",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "IS06",
+            "baslik": "Gunes Isisi ve Renk Iliskisi",
+            "kategori": "isi_sicaklik",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 28,
+            "malzemeler": [
+                "Iki esit kap",
+                "Su",
+                "Siyah kagit",
+                "Beyaz kagit"
+            ],
+            "guvenlik": [
+                "Guneste cok kalmamaya dikkat et."
+            ],
+            "adimlar": [
+                "Iki kaba esit miktarda su koy.",
+                "Birinin altina siyah, digerinin altina beyaz kagit koy.",
+                "Guneste beklet, sicakliklarini karsilastir."
+            ],
+            "tahmin_sorusu": "Hangi renk daha fazla isi emer?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Isinma gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Siyah renkler gunes isinlarini daha iyi emer ve daha fazla isinir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Miktari esit tutamamak"
+            ],
+            "gunluk_yasam_baglantisi": "Yaz kiyafetleri, gunes panelleri",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "isi_transfer",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "IS07",
+            "baslik": "Su Donma ve Genlesme",
+            "kategori": "isi_sicaklik",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 35,
+            "malzemeler": [
+                "Plastik sise",
+                "Su",
+                "Buzdolabi"
+            ],
+            "guvenlik": [
+                "Buzdolabini acip kapamaya dikkat et."
+            ],
+            "adimlar": [
+                "Siseyi suyla doldur, kapagini kapat.",
+                "Buzdolabina koy ve beklet.",
+                "Suyun donmasini ve genlesmeyi gozlemle."
+            ],
+            "tahmin_sorusu": "Su donunca hacmi nasil degisir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Donma ve genlesme gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Su donunca genlesir ve hacmi artar. Bu suyun ozel bir ozelligidir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Cok dolu doldurup sisenin patlamasina neden olmak"
+            ],
+            "gunluk_yasam_baglantisi": "Buz patlamalari, su borulari",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "isi_transfer",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "IS08",
+            "baslik": "El Isisi ve Isi Transferi",
+            "kategori": "isi_sicaklik",
+            "sinif_araligi": {
+                "en_az": 5,
+                "en_cok": 6
+            },
+            "tahmini_sure_dk": 15,
+            "malzemeler": [
+                "Metal para",
+                "Kagit",
+                "Kumas"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Metal parayi eline al, nasil hissettigini not et.",
+                "Kagidi eline al, karsilastir.",
+                "Kumasi eline al, karsilastir."
+            ],
+            "tahmin_sorusu": "Hangi madde daha hizli isinir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Isinma gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Metal iyi isi iletkenidir, elinden isiyi hizli ceker, bu yuzden soguk hissettirir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Cisimlerin baslangic sicakliginin farkli olmasi"
+            ],
+            "gunluk_yasam_baglantisi": "Yalitim, isi iletkenligi",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "isi_transfer",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "IS09",
+            "baslik": "Ruzgar ve Isi Kaybi",
+            "kategori": "isi_sicaklik",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 20,
+            "malzemeler": [
+                "Iki bardak",
+                "Sicak su",
+                "Vantilator veya kagit"
+            ],
+            "guvenlik": [
+                "Sicak suyu dikkatli kullan."
+            ],
+            "adimlar": [
+                "Iki bardaga esit sicaklikta su koy.",
+                "Birini ruzgarsiz yerde, digerini ruzgarli yerde (vantilator ile) beklet.",
+                "Sicaklik kaybini karsilastir."
+            ],
+            "tahmin_sorusu": "Ruzgar isi kaybini artirir mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Isi kaybi gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Ruzgar havayi hareket ettirir, bu da isi transferini hizlandirir ve isi kaybini artirir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Baslangic sicakligini esit tutamamak"
+            ],
+            "gunluk_yasam_baglantisi": "Ruzgar etkisi, soguk hava",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "isi_transfer",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "IS10",
+            "baslik": "Sicaklik Farki ve Enerji Transferi",
+            "kategori": "isi_sicaklik",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 25,
+            "malzemeler": [
+                "Iki metal kasik",
+                "Sicak su",
+                "Soğuk su",
+                "Termometre (varsa)"
+            ],
+            "guvenlik": [
+                "Sicak suyu dikkatli kullan."
+            ],
+            "adimlar": [
+                "Bir kasigi sicak suya, digerini soguk suya koy.",
+                "Bir sure bekleyip kasiklari cikar.",
+                "Sicaklik farkinin isi transferine etkisini gozlemle."
+            ],
+            "tahmin_sorusu": "Sicaklik farki arttikca isi transferi hizlanir mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Isi transferi gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Sicaklik farki arttikca isi transferi daha hizli olur.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Bekleme surelerini esit tutamamak"
+            ],
+            "gunluk_yasam_baglantisi": "Isi transferi, sicaklik farki",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "isi_transfer",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "SD03",
+            "baslik": "Ses Siddeti ve Mesafe",
+            "kategori": "ses_dalgalar",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 18,
+            "malzemeler": [
+                "Radyo veya telefon",
+                "Metre"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Ses kaynagini yakinda ac, siddetini dinle.",
+                "Uzaga git, tekrar dinle.",
+                "Mesafe ile ses siddeti arasindaki iliskiyi gozlemle."
+            ],
+            "tahmin_sorusu": "Mesafe arttikca ses siddeti azalir mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "mesafe_m",
+                    "etiket": "Olcum mesafesi",
+                    "tip": "sayi",
+                    "birim": "m"
+                },
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Ses siddeti gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Mesafe arttikca ses enerjisi dagilir ve siddeti azalir.",
+                "cikti_sablonu": "Mesafe: {{mesafe_m}} m. Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Ortamin gurultulu olmasi"
+            ],
+            "gunluk_yasam_baglantisi": "Ses yayilimi, hoparlor yerlesimi",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "ses_dalgasi",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "SD04",
+            "baslik": "Ses Frekansi ve Tizlik",
+            "kategori": "ses_dalgalar",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 20,
+            "malzemeler": [
+                "Muzik aleti veya ses uygulamasi",
+                "Gozlem"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Farkli notalari cal veya dinle.",
+                "Tiz ve pes sesleri karsilastir.",
+                "Frekans farkini gozlemle."
+            ],
+            "tahmin_sorusu": "Tiz sesler daha yuksek frekansli mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Frekans ve tizlik gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Tiz sesler daha yuksek frekansli, pes sesler daha dusuk frekanslidir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Ses siddetini frekansla karistirmak"
+            ],
+            "gunluk_yasam_baglantisi": "Muzik, ses notalari",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "ses_dalgasi",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "SD05",
+            "baslik": "Ses Yansimasi ve Yanki",
+            "kategori": "ses_dalgalar",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 22,
+            "malzemeler": [
+                "El",
+                "Buyuk oda veya koridor"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Buyuk bir odada elini carp, sesi dinle.",
+                "Yankinin olup olmadigini gozlemle.",
+                "Kucuk bir odada tekrar dene, karsilastir."
+            ],
+            "tahmin_sorusu": "Yanki hangi kosullarda olusur?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Yanki gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Ses sert yuzeylerden yansir. Buyuk ve bos odalarda yanki daha belirgindir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Ortamin gurultulu olmasi"
+            ],
+            "gunluk_yasam_baglantisi": "Yanki, akustik",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "ses_dalgasi",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "SD06",
+            "baslik": "Ses Gecirme ve Engel",
+            "kategori": "ses_dalgalar",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 19,
+            "malzemeler": [
+                "Radyo",
+                "Yastik",
+                "Karton kutu"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Radyoyu ac, sesi dinle.",
+                "Radyoyu yastiga sar, sesi tekrar dinle.",
+                "Ses gecirmeyi karsilastir."
+            ],
+            "tahmin_sorusu": "Yumusak maddeler sesi gecirir mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Ses gecirme gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Yumusak ve gecirgen maddeler sesi daha az gecirir veya soğurur.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Ses siddetini esit tutamamak"
+            ],
+            "gunluk_yasam_baglantisi": "Ses yalitimi, akustik duzenleme",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "ses_dalgasi",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "SD07",
+            "baslik": "Ses Olusturma ve Titresim",
+            "kategori": "ses_dalgalar",
+            "sinif_araligi": {
+                "en_az": 5,
+                "en_cok": 6
+            },
+            "tahmini_sure_dk": 16,
+            "malzemeler": [
+                "Kagit",
+                "Makas",
+                "Lastik bant"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Kagittan bir sekil kes.",
+                "Lastik bandi ger ve titret, sesi dinle.",
+                "Titresim ile ses arasindaki iliskiyi gozlemle."
+            ],
+            "tahmin_sorusu": "Ses nasil olusur? Titresim gerekli mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Titresim ve ses gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Ses titreşim sonucu olusur. Titresim hava molekullerini hareket ettirir ve ses dalgasi olusturur.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Lastigin cok gevsek olmasi"
+            ],
+            "gunluk_yasam_baglantisi": "Ses cikaran aletler, muzik",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "ses_dalgasi",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "SD08",
+            "baslik": "Ses Dalga Ozellikleri",
+            "kategori": "ses_dalgalar",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 24,
+            "malzemeler": [
+                "Su",
+                "Kucuk tas",
+                "Buyuk kap"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Kap suyla doldur.",
+                "Tasi suya at, dalgalari gozlemle.",
+                "Ses dalgalari ile su dalgalari arasindaki benzerligi dusun."
+            ],
+            "tahmin_sorusu": "Ses dalgalari su dalgalarina benzer mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Dalga gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Ses dalgalari su dalgalarina benzer, enerjiyi tasir ve yayilir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Tasi cok sert atmak"
+            ],
+            "gunluk_yasam_baglantisi": "Dalga hareketi, ses yayilimi",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "ses_dalgasi",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "SD09",
+            "baslik": "Ses Siddeti ve Kuvvet",
+            "kategori": "ses_dalgalar",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 17,
+            "malzemeler": [
+                "Kagit",
+                "Masa"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Kagidi hafifce yirt, sesi dinle.",
+                "Kagidi daha kuvvetli yirt, sesi dinle.",
+                "Kuvvet ile ses siddeti arasindaki iliskiyi gozlemle."
+            ],
+            "tahmin_sorusu": "Daha kuvvetli hareket daha siddetli ses uretir mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Ses siddeti gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Daha kuvvetli titreşimler daha siddetli sesler uretir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Kagidi esit yirtamamak"
+            ],
+            "gunluk_yasam_baglantisi": "Ses kontrolu, siddet ayari",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "ses_dalgasi",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "SD10",
+            "baslik": "Hava ve Ses Iletimi",
+            "kategori": "ses_dalgalar",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 21,
+            "malzemeler": [
+                "Zil veya telefon",
+                "Su altinda (varsa)",
+                "Gozlem"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Havada zili cal, sesi dinle.",
+                "Sesin havada nasil yayildigini dusun.",
+                "Havanin ses iletimindeki rolunu gozlemle."
+            ],
+            "tahmin_sorusu": "Ses havada nasil yayilir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Hava ve ses iletimi gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Ses hava molekulleri araciligiyla yayilir. Havada ses dalgalari olusturur.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Ortamin gurultulu olmasi"
+            ],
+            "gunluk_yasam_baglantisi": "Ses iletimi, hava ortami",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "ses_dalgasi",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "IG03",
+            "baslik": "Gunes Isini ve Golge",
+            "kategori": "isik_gorme",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 20,
+            "malzemeler": [
+                "Kalem",
+                "Kagit",
+                "Gunesli alan"
+            ],
+            "guvenlik": [
+                "Guneste cok kalmamaya dikkat et."
+            ],
+            "adimlar": [
+                "Kagit uzerine kalemi dik olarak koy.",
+                "Gunes isiginin golge olusturdugunu gozlemle.",
+                "Golgenin yonunu ve sekli gozlemle."
+            ],
+            "tahmin_sorusu": "Golge nasil olusur? Gunes isini golge olusturur mu?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Golge gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Isik bir engel ile karsilastiginda golge olusur. Golge isigin yolunu gosterir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Guneste cok kalmak"
+            ],
+            "gunluk_yasam_baglantisi": "Golge, gunes saati",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "isik_isini",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "IG04",
+            "baslik": "Isik Yansimasi ve Ayna",
+            "kategori": "isik_gorme",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 22,
+            "malzemeler": [
+                "Ayna",
+                "El feneri",
+                "Karanlik oda"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Karanlik odada feneri ac.",
+                "Isigi aynaya tut.",
+                "Yansiyan isigin yolunu gozlemle."
+            ],
+            "tahmin_sorusu": "Isik aynadan nasil yansir? Yansima acisi gelis acisina esit mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gelis_acisi",
+                    "etiket": "Gelis acisi (tahmini)",
+                    "tip": "sayi",
+                    "birim": "derece"
+                },
+                {
+                    "anahtar": "yansima_acisi",
+                    "etiket": "Yansima acisi (tahmini)",
+                    "tip": "sayi",
+                    "birim": "derece"
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Gelis acisi yansima acisina esittir. Bu yansima kanunudur.",
+                "cikti_sablonu": "Gelis: {{gelis_acisi}}°, Yansima: {{yansima_acisi}}°. Gelis acisi yansima acisina esit olmalidir."
+            },
+            "yaygin_hatalar": [
+                "Aci olcumu"
+            ],
+            "gunluk_yasam_baglantisi": "Ayna, reflektör",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "isik_isini",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "IG05",
+            "baslik": "Isik Kirilmasi ve Su",
+            "kategori": "isik_gorme",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 24,
+            "malzemeler": [
+                "Seffaf bardak",
+                "Su",
+                "Kalem"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Bardaga su koy.",
+                "Bardagin yanindan kalemi gozlemle.",
+                "Kalemin kirik gorundugunu not et."
+            ],
+            "tahmin_sorusu": "Isik suda nasil kirilir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Kirilma gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Isik farkli yogunluklu ortamlardan gecerken kirilir. Bu kirilma olayidir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Bardagin seffaf olmamasi"
+            ],
+            "gunluk_yasam_baglantisi": "Su altinda gozleme, mercek",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "isik_isini",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "IG06",
+            "baslik": "Renklerin Olusumu",
+            "kategori": "isik_gorme",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 26,
+            "malzemeler": [
+                "Gunes isigi",
+                "Su",
+                "Prizma (varsa) veya seffaf obje"
+            ],
+            "guvenlik": [
+                "Guneste cok kalmamaya dikkat et."
+            ],
+            "adimlar": [
+                "Gunes isigini gozlemle.",
+                "Prizma veya seffaf objeyi kullanarak renkleri ayir.",
+                "Renklerin olusumunu gozlemle."
+            ],
+            "tahmin_sorusu": "Beyaz isik kac renkten olusur?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Renk gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Beyaz isik farkli renklerden olusur. Prizma bu renkleri ayirir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Yeterli isik olmamasi"
+            ],
+            "gunluk_yasam_baglantisi": "Gokkusagi, prizma",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "isik_isini",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "IG07",
+            "baslik": "Isik Emilimi ve Renk",
+            "kategori": "isik_gorme",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 28,
+            "malzemeler": [
+                "Farkli renkli kagitlar",
+                "Gunes isigi",
+                "Termometre (varsa)"
+            ],
+            "guvenlik": [
+                "Guneste cok kalmamaya dikkat et."
+            ],
+            "adimlar": [
+                "Farkli renkli kagitlari gunes isigina koy.",
+                "Kagitlarin isinmasini gozlemle.",
+                "Renk ile isik emilimi arasindaki iliskiyi not et."
+            ],
+            "tahmin_sorusu": "Hangi renk daha fazla isik emer?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Isinma gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Siyah renkler daha fazla isik emer ve isinir, beyaz renkler daha az emer.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Esit miktarda isik almamasi"
+            ],
+            "gunluk_yasam_baglantisi": "Yaz kiyafetleri, isi emilimi",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "isik_isini",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "IG08",
+            "baslik": "Isik ve Gorunurluk",
+            "kategori": "isik_gorme",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 21,
+            "malzemeler": [
+                "Karanlik oda",
+                "El feneri",
+                "Cesitli objeler"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Karanlik odada objeleri gozlemle.",
+                "Feneri ac, objeleri tekrar gozlemle.",
+                "Isik ile gorunurluk arasindaki iliskiyi not et."
+            ],
+            "tahmin_sorusu": "Isik olmadan gorebilir miyiz?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Gorunurluk gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Gormek icin isik gerekir. Isik objelerden yansir ve goze ulasir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Tamamen karanlik olmamasi"
+            ],
+            "gunluk_yasam_baglantisi": "Gorme, isik kaynaklari",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "isik_isini",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "IG09",
+            "baslik": "Isik Yolu ve Dogrusal Yayilim",
+            "kategori": "isik_gorme",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 23,
+            "malzemeler": [
+                "El feneri",
+                "Kagit",
+                "Kalem",
+                "Karanlik oda"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Karanlik odada feneri ac.",
+                "Isigin yolunu gozlemle.",
+                "Isigin dogrusal yayildigini not et."
+            ],
+            "tahmin_sorusu": "Isik nasil yayilir? Dogrusal mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Isik yolu gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Isik dogrusal yayilir. Isik isinlari duz cizgi halinde ilerler.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Yeterli karanlik olmamasi"
+            ],
+            "gunluk_yasam_baglantisi": "Isik isinlari, isik yolu",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "isik_isini",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "IG10",
+            "baslik": "Cukur ve Tümsek Ayna Etkisi",
+            "kategori": "isik_gorme",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 25,
+            "malzemeler": [
+                "Cukur yuzey (kasik ic yuzey)",
+                "Tumsek yuzey (kasik dis yuzey)",
+                "Gozlem"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Kasigin ic yuzeyine (cukur) bak, goruntuyu gozlemle.",
+                "Kasigin dis yuzeyine (tumsek) bak, goruntuyu gozlemle.",
+                "Farklari karsilastir."
+            ],
+            "tahmin_sorusu": "Cukur ve tumsek yuzeyler goruntuyu nasil degistirir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Goruntu gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Cukur aynalar goruntuyu buyutur, tumsek aynalar kucultur ve genis acili goruntu verir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Kasigin temiz olmamasi"
+            ],
+            "gunluk_yasam_baglantisi": "Ayna, goruntu olusturma",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "isik_isini",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "BA02",
+            "baslik": "Hava Basinci ve Su",
+            "kategori": "basinc",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 22,
+            "malzemeler": [
+                "Bardak",
+                "Su",
+                "Kagit"
+            ],
+            "guvenlik": [
+                "Suyu dokmemeye dikkat et."
+            ],
+            "adimlar": [
+                "Bardagi suyla doldur.",
+                "Uzerine kagit koy, ters cevir.",
+                "Su dusmeden durup durmadigini gozlemle."
+            ],
+            "tahmin_sorusu": "Kagit suyu tutabilir mi? Hava basinci etkili mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Hava basinci gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Hava basinci suyu yukaridan asagiya iter ve suyun dusmesini engeller.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Kagidi sikica yapistirmamak"
+            ],
+            "gunluk_yasam_baglantisi": "Hava basinci, atmosfer basinci",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "delikli_sise",
+                "ayarlar": {
+                    "delik_sayisi": 3
+                }
+            }
+        },
+        {
+            "kimlik": "BA03",
+            "baslik": "Derinlik ve Su Basinci",
+            "kategori": "basinc",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 24,
+            "malzemeler": [
+                "Plastik sise",
+                "Su",
+                "Delik acici"
+            ],
+            "guvenlik": [
+                "Delik acmada yetiskin yardimi onerilir."
+            ],
+            "adimlar": [
+                "Siseyi suyla doldur.",
+                "Siseye farkli yuksekliklerde delikler ac.",
+                "Her delikten su fiskiyetsini gozlemle."
+            ],
+            "tahmin_sorusu": "Alttaki delikten su daha uzaga mi fiskiyetsin?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Fiskiye mesafesi gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Derinlik arttikca su basinci artar. Alttaki delikten daha uzaga su fiskiyetsin.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Deliklerin esit olmamasi"
+            ],
+            "gunluk_yasam_baglantisi": "Su basinci, derinlik",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "delikli_sise",
+                "ayarlar": {
+                    "delik_sayisi": 3
+                }
+            }
+        },
+        {
+            "kimlik": "BA04",
+            "baslik": "Balon ve Hava Basinci",
+            "kategori": "basinc",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 18,
+            "malzemeler": [
+                "Balon",
+                "Sise",
+                "Sicak su",
+                "Soğuk su"
+            ],
+            "guvenlik": [
+                "Sicak suyu dikkatli kullan."
+            ],
+            "adimlar": [
+                "Balonu sisenin agzina tak.",
+                "Siseyi sicak suya koy, balonu gozlemle.",
+                "Siseyi soguk suya koy, balonu gozlemle."
+            ],
+            "tahmin_sorusu": "Hava basinci sicaklikla degisir mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Balon degisimi gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Hava isininca genlesir ve basinci artar, soguyunca basinci azalir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Sicaklik farkinin yeterli olmamasi"
+            ],
+            "gunluk_yasam_baglantisi": "Hava basinci, sicaklik",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "delikli_sise",
+                "ayarlar": {
+                    "delik_sayisi": 3
+                }
+            }
+        },
+        {
+            "kimlik": "BA05",
+            "baslik": "Kuvvet ve Basinc Iliskisi",
+            "kategori": "basinc",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 20,
+            "malzemeler": [
+                "Kil veya hamur",
+                "Cetvel"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Hamurdan parca yap.",
+                "Farkli kuvvetlerle bas, izleri gozlemle.",
+                "Kuvvet ile basinc arasindaki iliskiyi not et."
+            ],
+            "tahmin_sorusu": "Kuvvet arttikca basinc artar mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Iz derinligi gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Ayni alanda kuvvet arttikca basinc artar. Basinc kuvvet ile dogru orantilidir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Kuvveti esit tutamamak"
+            ],
+            "gunluk_yasam_baglantisi": "Basinc, kuvvet uygulama",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "basinc_alan",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "BA06",
+            "baslik": "Sivi Basinci ve Derinlik",
+            "kategori": "basinc",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 26,
+            "malzemeler": [
+                "Seffaf kova",
+                "Su",
+                "Delik acici"
+            ],
+            "guvenlik": [
+                "Delik acmada yetiskin yardimi onerilir."
+            ],
+            "adimlar": [
+                "Kovaya suyu doldur.",
+                "Farkli yuksekliklerde delikler ac.",
+                "Her delikten su akisini gozlemle."
+            ],
+            "tahmin_sorusu": "Derinlik arttikca su basinci artar mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Su akis gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Sivi basinci derinlikle artar. Derinlik arttikca basinc artar.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Deliklerin esit olmamasi"
+            ],
+            "gunluk_yasam_baglantisi": "Baraj, su basinci",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "delikli_sise",
+                "ayarlar": {
+                    "delik_sayisi": 3
+                }
+            }
+        },
+        {
+            "kimlik": "BA07",
+            "baslik": "Hava Basinci ve Pipet",
+            "kategori": "basinc",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 16,
+            "malzemeler": [
+                "Pipet",
+                "Bardak",
+                "Su"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Bardaga su koy.",
+                "Pipeti suya sok, ucunu kapat.",
+                "Pipeti cikar, suyun dusmesini gozlemle."
+            ],
+            "tahmin_sorusu": "Pipet suyu nasil tutar? Hava basinci etkili mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Pipet ve hava basinci gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Pipet ucu kapatildiginda hava basinci suyun dusmesini engeller.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Pipeti tam kapatamamak"
+            ],
+            "gunluk_yasam_baglantisi": "Pipet kullanimi, hava basinci",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "delikli_sise",
+                "ayarlar": {
+                    "delik_sayisi": 3
+                }
+            }
+        },
+        {
+            "kimlik": "BA08",
+            "baslik": "Ayak Izi ve Basinc",
+            "kategori": "basinc",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 19,
+            "malzemeler": [
+                "Kum veya kar",
+                "Gozlem"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Kum veya kara ayakla bas.",
+                "Ayak izinin derinligini gozlemle.",
+                "Ayak alani ile basinc arasindaki iliskiyi dusun."
+            ],
+            "tahmin_sorusu": "Ayak izi derinligi neye baglidir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Ayak izi gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Ayni kuvvetle, kucuk alanda daha fazla basinc olusur ve daha derin iz kalir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Kuvveti esit tutamamak"
+            ],
+            "gunluk_yasam_baglantisi": "Ayak izi, basinc",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "delikli_sise",
+                "ayarlar": {
+                    "delik_sayisi": 3
+                }
+            }
+        },
+        {
+            "kimlik": "BA09",
+            "baslik": "Balon ve Hava Basinci Iliskisi",
+            "kategori": "basinc",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 21,
+            "malzemeler": [
+                "Balon",
+                "Sise",
+                "Hava"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Balonu sisire.",
+                "Balonun icindeki hava basincini dusun.",
+                "Balonun sekline bak, basinc etkisini gozlemle."
+            ],
+            "tahmin_sorusu": "Balon icindeki hava basinci balonun sekline etki eder mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Balon basinci gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Balon icindeki hava basinci balonun sekline etki eder ve balonu sisirir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Balonu cok sisirmemek"
+            ],
+            "gunluk_yasam_baglantisi": "Balon, hava basinci",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "delikli_sise",
+                "ayarlar": {
+                    "delik_sayisi": 3
+                }
+            }
+        },
+        {
+            "kimlik": "BA10",
+            "baslik": "Su Seviyesi ve Basinc",
+            "kategori": "basinc",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 23,
+            "malzemeler": [
+                "Iki esit sise",
+                "Su",
+                "Delik acici"
+            ],
+            "guvenlik": [
+                "Delik acmada yetiskin yardimi onerilir."
+            ],
+            "adimlar": [
+                "Bir siseyi az, digerini cok suyla doldur.",
+                "Her ikisine de ayni yukseklikte delik ac.",
+                "Su akisini karsilastir."
+            ],
+            "tahmin_sorusu": "Su seviyesi arttikca basinc artar mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Su akis gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Su seviyesi arttikca derinlik artar ve basinc artar. Daha fazla su daha fazla basinc demektir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Deliklerin esit olmamasi"
+            ],
+            "gunluk_yasam_baglantisi": "Su basinci, seviye",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "delikli_sise",
+                "ayarlar": {
+                    "delik_sayisi": 3
+                }
+            }
+        },
+        {
+            "kimlik": "BM02",
+            "baslik": "Makarali Sistem",
+            "kategori": "basit_makineler",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 28,
+            "malzemeler": [
+                "Ip",
+                "Sabit nokta",
+                "Agirlik"
+            ],
+            "guvenlik": [
+                "Agirligi dikkatli kullan."
+            ],
+            "adimlar": [
+                "Ipi sabit noktadan gecir.",
+                "Agirligi bir uca bagla.",
+                "Diger ucundan cek, kuvvet gereksinimini gozlemle."
+            ],
+            "tahmin_sorusu": "Makara kuvvet gereksinimini azaltir mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Kuvvet gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Makara kuvvet yonunu degistirir ve bazen kuvvet gereksinimini azaltabilir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Ipin kaymasi"
+            ],
+            "gunluk_yasam_baglantisi": "Makara, yuk kaldirma",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "makine",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "BM03",
+            "baslik": "Egil Duzlem (Rampa)",
+            "kategori": "basit_makineler",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 26,
+            "malzemeler": [
+                "Kitaplar",
+                "Tahta",
+                "Agirlik",
+                "Cetvel"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Kitaplari ust uste koy, uzerine tahtayi yerlestir (rampa).",
+                "Agirligi dogrudan yukari kaldirmaya calis.",
+                "Agirligi rampa uzerinden yukari cekmeye calis, kuvvet gereksinimini karsilastir."
+            ],
+            "tahmin_sorusu": "Rampa kuvvet gereksinimini azaltir mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Kuvvet karsilastirmasi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Egil duzlem (rampa) kuvvet gereksinimini azaltir ama mesafeyi artirir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Rampanin kaymasi"
+            ],
+            "gunluk_yasam_baglantisi": "Rampa, yuk kaldirma",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "makine",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "BM04",
+            "baslik": "Vida ve Kuvvet",
+            "kategori": "basit_makineler",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 24,
+            "malzemeler": [
+                "Vida",
+                "Tahta",
+                "Gozlem"
+            ],
+            "guvenlik": [
+                "Vidayi dikkatli kullan."
+            ],
+            "adimlar": [
+                "Vidayi tahtaya sokmaya calis.",
+                "Vidanin donerek ilerledigini gozlemle.",
+                "Kuvvet gereksinimini not et."
+            ],
+            "tahmin_sorusu": "Vida nasil calisir? Kuvvet gereksinimini azaltir mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Vida calismasi gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Vida egil duzlemin sarilmis halidir. Kuvvet gereksinimini azaltir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Vidanin kaymasi"
+            ],
+            "gunluk_yasam_baglantisi": "Vida, baglanti elemanlari",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "makine",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "BM05",
+            "baslik": "Kama ve Kuvvet",
+            "kategori": "basit_makineler",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 22,
+            "malzemeler": [
+                "Bicak veya kama seklinde obje",
+                "Ahsap",
+                "Gozlem"
+            ],
+            "guvenlik": [
+                "Kesici aletleri dikkatli kullan, yetiskin gozetimi onerilir."
+            ],
+            "adimlar": [
+                "Kamayi ahsaba sokmaya calis.",
+                "Kamanin kuvveti nasil yonlendirdigini gozlemle.",
+                "Kuvvet gereksinimini not et."
+            ],
+            "tahmin_sorusu": "Kama kuvveti nasil yonlendirir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Kama calismasi gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Kama kuvveti yataydan dikeye yonlendirir ve basinc olusturur.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Cok fazla kuvvet uygulamak"
+            ],
+            "gunluk_yasam_baglantisi": "Bicak, kama, ayrisma",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "makine",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "BM06",
+            "baslik": "Tekerlek ve Eksen",
+            "kategori": "basit_makineler",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 20,
+            "malzemeler": [
+                "Oyuncak araba",
+                "Duz yuzey",
+                "Gozlem"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Araci itmeye calis.",
+                "Tekerlegin donmesini gozlemle.",
+                "Surtunmeyi azaltma etkisini not et."
+            ],
+            "tahmin_sorusu": "Tekerlek surtunmeyi azaltir mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Tekerlek etkisi gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Tekerlek surtunmeyi azaltir ve hareketi kolaylastirir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Yuzeyin egimli olmasi"
+            ],
+            "gunluk_yasam_baglantisi": "Tekerlek, araclar",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "makine",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "BM07",
+            "baslik": "Cift Kaldiraç",
+            "kategori": "basit_makineler",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 27,
+            "malzemeler": [
+                "Iki cetvel",
+                "Iki destek noktasi",
+                "Agirliklar"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Iki cetveli farkli destek noktalari ile dene.",
+                "Agirliklari kaldirmaya calis.",
+                "Destek noktasi konumunun etkisini gozlemle."
+            ],
+            "tahmin_sorusu": "Destek noktasi konumu kuvvet gereksinimini nasil etkiler?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Kaldiraç etkisi gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Destek noktasi agirliga yakinsa daha az kuvvet gerekir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Cetvellerin kaymasi"
+            ],
+            "gunluk_yasam_baglantisi": "Kaldiraç, yuk kaldirma",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "makine",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "BM08",
+            "baslik": "Kasnak Sistemi",
+            "kategori": "basit_makineler",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 29,
+            "malzemeler": [
+                "Ip",
+                "Iki sabit nokta",
+                "Agirlik"
+            ],
+            "guvenlik": [
+                "Agirligi dikkatli kullan."
+            ],
+            "adimlar": [
+                "Ipi iki sabit nokta arasina gecir.",
+                "Agirligi bir uca bagla.",
+                "Diger ucundan cek, kuvvet gereksinimini gozlemle."
+            ],
+            "tahmin_sorusu": "Kasnak sistemi kuvvet gereksinimini nasil etkiler?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Kasnak etkisi gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Kasnak sistemi kuvvet yonunu degistirir ve bazen kuvvet kazanci saglar.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Ipin kaymasi"
+            ],
+            "gunluk_yasam_baglantisi": "Kasnak, makine sistemleri",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "makine",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "BM09",
+            "baslik": "Destek Noktasi ve Kuvvet Kazanci",
+            "kategori": "basit_makineler",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 25,
+            "malzemeler": [
+                "Cetvel",
+                "Destek noktasi",
+                "Farkli agirliklar"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Cetveli destek noktasina yerlestir.",
+                "Agirligi destek noktasina farkli mesafelerde koy.",
+                "Kuvvet gereksinimini karsilastir."
+            ],
+            "tahmin_sorusu": "Destek noktasindan uzaga agirlik koyunca kuvvet gereksinimi artar mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "agirlik_konum_cm",
+                    "etiket": "Agirlik destek mesafesi",
+                    "tip": "sayi",
+                    "birim": "cm"
+                },
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Kuvvet gereksinimi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Destek noktasindan uzaga agirlik koyunca kuvvet gereksinimi artar.",
+                "cikti_sablonu": "Konum: {{agirlik_konum_cm}} cm. Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Destek noktasinin kaymasi"
+            ],
+            "gunluk_yasam_baglantisi": "Kaldiraç, kuvvet kazanci",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "makine",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "BM10",
+            "baslik": "Basit Makine Kombinasyonlari",
+            "kategori": "basit_makineler",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 30,
+            "malzemeler": [
+                "Cesitli basit makineler",
+                "Gozlem"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Farkli basit makineleri gozlemle.",
+                "Bunlarin nasil calistigini dusun.",
+                "Kombinasyonlarini not et."
+            ],
+            "tahmin_sorusu": "Basit makineler birlestirilebilir mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Kombinasyon gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Basit makineler birlestirilerek daha kompleks makineler olusturulabilir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Gozlem eksikligi"
+            ],
+            "gunluk_yasam_baglantisi": "Karmasik makineler, kombinasyonlar",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "makine",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "BS03",
+            "baslik": "Degisken Belirleme",
+            "kategori": "bilimsel_surec",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 32,
+            "malzemeler": [
+                "Herhangi bir deney seti",
+                "Kagit",
+                "Kalem"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Bir deney planla.",
+                "Bagimli ve bagimsiz degiskenleri belirle.",
+                "Kontrollu degiskenleri liste."
+            ],
+            "tahmin_sorusu": "Deneyde hangi degiskenleri kontrol etmeliyiz?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "degiskenler",
+                    "etiket": "Degisken listesi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Bilimsel deneylerde degiskenleri kontrol etmek onemlidir. Bagimli, bagimsiz ve kontrollu degiskenler vardir.",
+                "cikti_sablonu": "Degiskenler: {{degiskenler}}"
+            },
+            "yaygin_hatalar": [
+                "Degiskenleri karistirmak"
+            ],
+            "gunluk_yasam_baglantisi": "Bilimsel yontem, kontrollu deneyler",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "gozlem",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "BS04",
+            "baslik": "Sonuc Cikarma ve Yorumlama",
+            "kategori": "bilimsel_surec",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 28,
+            "malzemeler": [
+                "Deney verileri",
+                "Kagit",
+                "Kalem"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Deney verilerini topla.",
+                "Verileri analiz et.",
+                "Sonuclar cikar ve yorumla."
+            ],
+            "tahmin_sorusu": "Verilerden nasil sonuc cikaririz?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "sonuc",
+                    "etiket": "Sonuc ve yorum",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Bilimsel surecte veriler analiz edilir, sonuclar cikarilir ve yorumlanir.",
+                "cikti_sablonu": "Sonuc: {{sonuc}}"
+            },
+            "yaygin_hatalar": [
+                "Oznel yorumlar"
+            ],
+            "gunluk_yasam_baglantisi": "Veri analizi, sonuc cikarma",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "gozlem",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "BS05",
+            "baslik": "Deney Raporu Yazma",
+            "kategori": "bilimsel_surec",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 35,
+            "malzemeler": [
+                "Deney verileri",
+                "Kagit",
+                "Kalem"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Deney raporu icin baslik belirle.",
+                "Amac, yontem, sonuc ve yorum bolumlerini yaz.",
+                "Raporu duzenle."
+            ],
+            "tahmin_sorusu": "Bilimsel rapor nasil yazilir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "rapor",
+                    "etiket": "Rapor ozeti",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Bilimsel raporlar amac, yontem, sonuc ve yorum bolumlerini icerir.",
+                "cikti_sablonu": "Rapor: {{rapor}}"
+            },
+            "yaygin_hatalar": [
+                "Eksik bolumler"
+            ],
+            "gunluk_yasam_baglantisi": "Bilimsel yazim, raporlama",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "gozlem",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "BS06",
+            "baslik": "Karsilastirma ve Kontrol",
+            "kategori": "bilimsel_surec",
+            "sinif_araligi": {
+                "en_az": 5,
+                "en_cok": 6
+            },
+            "tahmini_sure_dk": 30,
+            "malzemeler": [
+                "Iki farkli deney grubu",
+                "Kagit",
+                "Kalem"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Iki farkli deney grubu hazirla.",
+                "Birini kontrol grubu olarak kullan.",
+                "Sonuclari karsilastir."
+            ],
+            "tahmin_sorusu": "Kontrol grubu neden onemlidir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "karsilastirma",
+                    "etiket": "Karsilastirma sonucu",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Kontrol grubu deneyin guvenilirligini artirir. Karsilastirma yapilabilmesi icin gereklidir.",
+                "cikti_sablonu": "Karsilastirma: {{karsilastirma}}"
+            },
+            "yaygin_hatalar": [
+                "Kontrol grubu olusturmamak"
+            ],
+            "gunluk_yasam_baglantisi": "Kontrollu deneyler, karsilastirma",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "gozlem",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "BS07",
+            "baslik": "Olcme ve Birimler",
+            "kategori": "bilimsel_surec",
+            "sinif_araligi": {
+                "en_az": 5,
+                "en_cok": 6
+            },
+            "tahmini_sure_dk": 25,
+            "malzemeler": [
+                "Cetvel",
+                "Tartı (varsa)",
+                "Cesitli objeler"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Cesitli objeleri olc.",
+                "Uygun birimleri kullan.",
+                "Olcum sonuclarini kaydet."
+            ],
+            "tahmin_sorusu": "Neden standart birimler kullaniriz?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "olcumler",
+                    "etiket": "Olcum sonuclari",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Standart birimler kullanmak olcumleri guvenilir ve karsilastirilabilir yapar.",
+                "cikti_sablonu": "Olcumler: {{olcumler}}"
+            },
+            "yaygin_hatalar": [
+                "Birimleri karistirmak"
+            ],
+            "gunluk_yasam_baglantisi": "Olcme, standart birimler",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "gozlem",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "BS08",
+            "baslik": "Grafik Cizimi",
+            "kategori": "bilimsel_surec",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 33,
+            "malzemeler": [
+                "Deney verileri",
+                "Kagit",
+                "Cetvel",
+                "Kalem"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Deney verilerini topla.",
+                "Grafik eksenlerini belirle.",
+                "Verileri grafige aktar."
+            ],
+            "tahmin_sorusu": "Grafik verileri nasil gorsellestirir?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "gozlem",
+                    "etiket": "Grafik gozlemi",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Grafikler verileri gorsellestirir ve iliskileri anlamayi kolaylastirir.",
+                "cikti_sablonu": "Gozlem: {{gozlem}}"
+            },
+            "yaygin_hatalar": [
+                "Eksenleri yanlis belirlemek"
+            ],
+            "gunluk_yasam_baglantisi": "Veri gorsellestirme, grafik",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "gozlem",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "BS09",
+            "baslik": "Tekrarlanabilirlik Testi",
+            "kategori": "bilimsel_surec",
+            "sinif_araligi": {
+                "en_az": 6,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 40,
+            "malzemeler": [
+                "Deney seti",
+                "Kagit",
+                "Kalem"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Deneyi bir kez yap, sonuclari kaydet.",
+                "Deneyi tekrar yap, sonuclari kaydet.",
+                "Sonuclari karsilastir."
+            ],
+            "tahmin_sorusu": "Deneyler tekrarlanabilir olmali mi?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "sonuclar",
+                    "etiket": "Tekrar sonuclari",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Bilimsel deneyler tekrarlanabilir olmalidir. Ayni kosullarda benzer sonuclar vermelidir.",
+                "cikti_sablonu": "Sonuclar: {{sonuclar}}"
+            },
+            "yaygin_hatalar": [
+                "Kosullari esit tutamamak"
+            ],
+            "gunluk_yasam_baglantisi": "Bilimsel guvenilirlik, tekrarlanabilirlik",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "gozlem",
+                "ayarlar": {}
+            }
+        },
+        {
+            "kimlik": "BS10",
+            "baslik": "Problem Cozme ve Deney Tasarimi",
+            "kategori": "bilimsel_surec",
+            "sinif_araligi": {
+                "en_az": 7,
+                "en_cok": 7
+            },
+            "tahmini_sure_dk": 38,
+            "malzemeler": [
+                "Problem durumu",
+                "Malzemeler",
+                "Kagit",
+                "Kalem"
+            ],
+            "guvenlik": [],
+            "adimlar": [
+                "Bir problem belirle.",
+                "Hipotez olustur.",
+                "Deney tasarla ve uygula."
+            ],
+            "tahmin_sorusu": "Bilimsel problem nasil cozulur?",
+            "olcum_alanlari": [
+                {
+                    "anahtar": "cozum",
+                    "etiket": "Problem cozumu",
+                    "tip": "yazi",
+                    "birim": ""
+                }
+            ],
+            "analiz": {
+                "tur": "kural",
+                "kural": "Bilimsel problem cozme sureci: Problem belirleme -> Hipotez -> Deney -> Sonuc -> Yorum.",
+                "cikti_sablonu": "Cozum: {{cozum}}"
+            },
+            "yaygin_hatalar": [
+                "Eksik planlama"
+            ],
+            "gunluk_yasam_baglantisi": "Bilimsel dusunme, problem cozme",
+            "animasyon": {
+                "tur": "canvas",
+                "ad": "gozlem",
+                "ayarlar": {}
+            }
+        }
+    ]
+}
